@@ -1,0 +1,12 @@
+{
+  "extends": "@torian12321/typescript-config/vite-react",
+  "include": [".", "src", ".storybook/**/*.ts", ".storybook/**/*.tsx"],
+  "exclude": ["dist", "examples", "docs"],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "jsx": "react-jsx",
+    "paths": {
+      "src/*": ["src/*"]
+    }
+  }
+}

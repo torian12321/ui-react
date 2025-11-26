@@ -1,0 +1,76 @@
+{
+  "name": "@torian12321/react-components-library-template",
+  "version": "0.0.0",
+  "type": "module",
+  "prettier": "@torian12321/prettier-config",
+  "scripts": {
+    "start": "storybook dev -p 6006",
+    "build": "vite build",
+    "build:storybook": "storybook build",
+    "format": "eslint --fix && prettier --write .",
+    "format:check": "eslint && prettier --check .",
+    "test": "vitest run",
+    "test:watch": "vitest --ui",
+    "prepublishOnly": "npm run format:check && npm run test && npm run build"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://npm.pkg.github.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/torian12321/react-components-library-template.git"
+  },
+  "files": [
+    "dist/**/*"
+  ],
+  "exports": {
+    "./components": {
+      "types": "./dist/components.d.ts",
+      "import": "./dist/components.js",
+      "require": "./dist/components.cjs"
+    },
+    "./layout": {
+      "types": "./dist/layout.d.ts",
+      "import": "./dist/layout.js",
+      "require": "./dist/layout.cjs"
+    },
+    "./views": {
+      "types": "./dist/views.d.ts",
+      "import": "./dist/views.js",
+      "require": "./dist/views.cjs"
+    }
+  },
+  "peerDependencies": {
+    "react": "^18.0.0 || ^19.0.0",
+    "react-dom": "^18.0.0 || ^19.0.0"
+  },
+  "devDependencies": {
+    "@storybook/addon-docs": "^10.0.8",
+    "@storybook/addon-onboarding": "^10.0.8",
+    "@storybook/react-vite": "^10.0.8",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.0",
+    "@torian12321/eslint-config": "0.0.11",
+    "@torian12321/prettier-config": "0.0.4",
+    "@torian12321/typescript-config": "0.0.5",
+    "@types/node": "^24.10.0",
+    "@types/react": "^19.2.3",
+    "@types/react-dom": "^19.2.2",
+    "@vitejs/plugin-react": "^5.1.0",
+    "@vitest/coverage-v8": "^4.0.8",
+    "@vitest/ui": "^4.0.8",
+    "eslint": "^9.39.1",
+    "eslint-plugin-storybook": "^10.0.8",
+    "globals": "^16.5.0",
+    "jsdom": "^27.1.0",
+    "prettier": "^3.6.2",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "rollup-plugin-visualizer": "^6.0.5",
+    "storybook": "^10.0.8",
+    "vite": "^7.2.2",
+    "vite-plugin-dts": "^4.5.4",
+    "vitest": "^4.0.8"
+  }
+}
