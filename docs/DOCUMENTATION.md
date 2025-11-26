@@ -22,7 +22,7 @@ To publish the documentation to GitHub Pages:
 4. Choose the `master` (or `main`) branch and `/docs` folder
 5. Click **Save**
 
-The documentation will be available at `https://yourusername.github.io/react-components-library-template/`
+The documentation will be available at `https://yourusername.github.io/ui-react/`
 
 ### Writing Documentation
 

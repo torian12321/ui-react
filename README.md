@@ -1,7 +1,7 @@
 <p align="center">
-  <a href="https://github.com/torian12321/react-components-library-template/actions/workflows/ci.yml"><img src="https://github.com/torian12321/react-components-library-template/actions/workflows/CI.yml/badge.svg?branch=master" alt="build status"></a>
-    <a href="https://github.com/torian12321/react-components-library-template/releases/latest" title="Latest Release">
-  <img alt="GitHub release" src="https://img.shields.io/github/v/release/torian12321/react-components-library-template" />
+  <a href="https://github.com/torian12321/ui-react/actions/workflows/ci.yml"><img src="https://github.com/torian12321/ui-react/actions/workflows/CI.yml/badge.svg?branch=master" alt="build status"></a>
+    <a href="https://github.com/torian12321/ui-react/releases/latest" title="Latest Release">
+  <img alt="GitHub release" src="https://img.shields.io/github/v/release/torian12321/ui-react" />
   </a>
 </p>
 
@@ -9,9 +9,9 @@
 
 Template for js-libraries.
 
-Create a [new repository](https://github.com/new) and select **@torian12321/react-components-library-template** from templates.
+Create a [new repository](https://github.com/new) and select **@torian12321/ui-react** from templates.
 
-Search on the project for any reference to `@torian12321/react-components-library-template` and replace it with your library name.
+Search on the project for any reference to `@torian12321/ui-react` and replace it with your library name.
 
 Create your first functions following:
 
@@ -21,7 +21,7 @@ Create your first functions following:
 
 Remove example functions `greet.ts`, `isBoolean.ts`, `isString.ts` and their respective tests files.
 
-Remove [`React Components Library Usage`](#react-components-library-template-usage) block from documentation
+Remove [`React Components Library Usage`](#ui-react-usage) block from documentation
 
 # Usage
 
@@ -32,7 +32,7 @@ Remove [`React Components Library Usage`](#react-components-library-template-usa
 ## Installation
 
 ```sh
-npm install @torian12321/react-components-library-template --save-dev
+npm install @torian12321/ui-react --save-dev
 ```
 
 # TODO

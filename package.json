@@ -1,5 +1,5 @@
 {
-  "name": "@torian12321/react-components-library-template",
+  "name": "@torian12321/ui-react",
   "version": "0.0.0",
   "type": "module",
   "prettier": "@torian12321/prettier-config",
@@ -19,7 +19,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/torian12321/react-components-library-template.git"
+    "url": "git+https://github.com/torian12321/ui-react.git"
   },
   "files": [
     "dist/**/*"
@@ -47,7 +47,6 @@
   },
   "devDependencies": {
     "@storybook/addon-docs": "^10.0.8",
-    "@storybook/addon-onboarding": "^10.0.8",
     "@storybook/react-vite": "^10.0.8",
     "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^16.3.0",
