@@ -3,7 +3,8 @@ import { useState } from 'react';
 import MuiDeleteIcon from '@mui/icons-material/Delete';
 import type { Meta, StoryObj } from '@storybook/react-vite';
 
-import { Button } from '../Button';
+import { Button } from 'src/components';
+
 import type { AccordionProps } from './Accordion.types';
 import {
   Accordion,
