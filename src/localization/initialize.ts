@@ -6,11 +6,25 @@ import { DEFAULT_LANGUAGE, I18N_NAMESPACE } from 'src/constants';
 import localizationEn from './en/localization.en';
 import localizationEs from './es/localization.es';
 
+// Get the language from localStorage if it exists (matching Zustand's storage key)
+const getInitialLanguage = (): string => {
+  try {
+    const appStorage = localStorage.getItem('app-storage');
+    if (appStorage) {
+      const parsed = JSON.parse(appStorage);
+      return parsed?.state?.lang ?? DEFAULT_LANGUAGE;
+    }
+  } catch (error) {
+    console.error('Error reading language from localStorage:', error);
+  }
+  return DEFAULT_LANGUAGE;
+};
+
 i18n
   .use(initReactI18next) // passes i18n down to react-i18next
   .init({
     fallbackLng: DEFAULT_LANGUAGE,
-    lng: DEFAULT_LANGUAGE, // language to use, more information here: https://www.i18next.com/overview/configuration-options#languages-namespaces-resources
+    lng: getInitialLanguage(), // Initialize with language from localStorage
     // you can use the i18n.changeLanguage function to change the language manually: https://www.i18next.com/overview/api#changelanguage
     // if you're using a language detector, do not define the lng option
 

@@ -1,11 +1,11 @@
-// export {
-//   useGetAppLang,
-//   useGetAppTheme,
-//   useHideAppLoader,
-//   useSetAppLang,
-//   useSetAppTheme,
-//   useShowAppLoader,
-// } from './appStore';
+export {
+  useGetAppLang,
+  useGetAppTheme,
+  useHideAppLoader,
+  useSetAppLang,
+  useSetAppTheme,
+  useShowAppLoader,
+} from './appStore';
 export { Provider } from './Provider';
 // export {
 //   showMessageError,

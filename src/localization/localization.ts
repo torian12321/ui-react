@@ -6,7 +6,7 @@ import type { AppLanguages } from 'src/types';
 
 /** Components using this hook will automatically re-render when the language changes */
 export const useLocalization = () => {
-  const { t } = useTranslation<typeof I18N_NAMESPACE>(I18N_NAMESPACE); // Use library namespace
+  const { t } = useTranslation(I18N_NAMESPACE); // Use library namespace
 
   return t;
 };
