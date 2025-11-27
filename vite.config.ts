@@ -56,7 +56,7 @@ export default defineConfig({
       enabled: true,
       reporter: ['text', 'html'],
       include: ['src/**'],
-      exclude: ['**/index.ts', '**/*.stories.{ts,tsx}'],
+      exclude: ['**/index.ts', '**/*.stories.{ts,tsx}', '**/*.styles.ts'],
       thresholds: {
         /** Percentage of coverage test required */
         lines: 10,
