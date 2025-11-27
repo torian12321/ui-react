@@ -1,14 +1,12 @@
 import 'react-i18next';
 
-import type { Localization, PartialLocalization } from './localization';
+import type { Localization } from './localization';
 
 declare module 'i18next' {
   interface CustomTypeOptions {
-    defaultNS: 'en';
+    defaultNS: 'torian-ui'; // Match the namespace constant
     resources: {
-      en: Localization;
-      es: PartialLocalization;
-      // any other languages you would like to type
+      'torian-ui': Localization;
     };
   }
 }

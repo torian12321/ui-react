@@ -1,5 +1,7 @@
 export * from './Accordion';
+export * from './Backdrop';
 export * from './Button';
+export * from './Chip';
 export * from './LoadingBar';
 export * from './LoadingSpinner';
 export * from './Tabs';
