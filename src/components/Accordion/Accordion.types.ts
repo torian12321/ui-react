@@ -1,7 +1,7 @@
 import type { MouseEvent, ReactElement } from 'react';
 import type SvgIcon from '@mui/material/SvgIcon';
 
-import type { ComponentWithStyles, ComponentWithTestId } from '../../types';
+import type { ComponentWithStyles, ComponentWithTestId } from 'src/types';
 
 export type AccordionGroupProps = ComponentWithStyles &
   ComponentWithTestId & {

@@ -2,9 +2,9 @@ import type { JSX, MouseEvent } from 'react';
 import DefaultIcon from '@mui/icons-material/Add';
 import MuiBox from '@mui/material/Box';
 
+import { Tooltip } from 'src/components';
 import { useCombineSxStyles } from 'src/utils';
 
-import { Tooltip } from '../Tooltip';
 import { btnStyles } from './Accordion.styles';
 import type { IconButtonProps } from './Accordion.types';
 
