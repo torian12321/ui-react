@@ -38,8 +38,8 @@ export default defineConfig({
       exclude: [
         '**/*.test.ts',
         '**/*.test.tsx',
-        '**/vitest.setup.ts',
-        '**/vitest.setup.tsx',
+        '**/setupTests.ts',
+        '**/setupTests.tsx',
         'vite.config.ts',
         '.storybook/**',
         '**/*.stories.ts',
@@ -54,7 +54,7 @@ export default defineConfig({
   ],
   test: {
     environment: 'jsdom',
-    setupFiles: ['./src/vitest.setup.ts'],
+    setupFiles: ['./src/setupTests.ts'],
     coverage: {
       enabled: true,
       reporter: ['text', 'html'],
