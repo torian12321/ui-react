@@ -15,11 +15,11 @@ jobs:
       - name: 🔧 Setup NPM and Install Dependencies
         uses: ./.github/actions/setup-npm
 
-      - name: 🧪 Run tests
-        run: npm run test
-
       - name: 💅 Check formatting
         run: npm run format:check
+
+      - name: 🧪 Run tests
+        run: npm run test
 
       - name: ⛏️ Build the library and Storybook
         run: |
