@@ -23,7 +23,7 @@ export const contentStyles: SxProps<Theme> = {
   display: 'flex',
   flexDirection: 'row',
   alignItems: 'center',
-  gap: 8,
+  gap: 1,
 };
 
 export const logoStyles: SxProps<Theme> = {
