@@ -1,4 +1,4 @@
-import { useEffect, type PropsWithChildren } from 'react';
+import { type PropsWithChildren, useEffect } from 'react';
 import MuiBox from '@mui/material/Box';
 import CssBaseline from '@mui/material/CssBaseline';
 
@@ -8,10 +8,10 @@ import 'src/localization/initialize';
 import { Backdrop } from 'src/components';
 import { setLanguage } from 'src/localization';
 
-import { useGetLoadingDetails, useGetAppLang } from './appStore';
+import { useGetAppLang, useGetLoadingDetails } from './appStore';
 import { appGlobalStyles } from './Provider.styles';
-// import { SnackbarProvider } from './snackbar';
-// import { ThemeProvider } from './theme';
+import { SnackbarProvider } from './snackbar';
+import { ThemeProvider } from './theme';
 
 export const Provider = ({ children }: PropsWithChildren) => {
   const { isLoading, message } = useGetLoadingDetails();
@@ -23,15 +23,14 @@ export const Provider = ({ children }: PropsWithChildren) => {
   }, [lang]);
 
   return (
-    <>
-      {/*  <ThemeProvider> */}
+    <ThemeProvider>
       <CssBaseline enableColorScheme />
       <MuiBox sx={appGlobalStyles}>
-        <Backdrop show={isLoading} message={message} />
-        {/* <SnackbarProvider>{children} </SnackbarProvider> */}
-        {children}
+        <SnackbarProvider>
+          <Backdrop show={isLoading} message={message} />
+          {children}
+        </SnackbarProvider>
       </MuiBox>
-      {/* </ThemeProvider> */}
-    </>
+    </ThemeProvider>
   );
 };

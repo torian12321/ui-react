@@ -11,6 +11,17 @@ const meta: Meta = {
   },
   tags: ['autodocs'],
   args: { label: 'Chip label' },
+  argTypes: {
+    label: {
+      control: { type: 'text' },
+    },
+    color: {
+      control: { type: 'color' },
+    },
+    bgColor: {
+      control: { type: 'color' },
+    },
+  },
 } satisfies Meta<typeof Chip>;
 
 export default meta;

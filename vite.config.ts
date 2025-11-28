@@ -41,6 +41,9 @@ export default defineConfig({
         '**/vitest.setup.ts',
         '**/vitest.setup.tsx',
         'vite.config.ts',
+        '.storybook/**',
+        '**/*.stories.ts',
+        '**/*.stories.tsx',
       ],
     }),
     visualizer({
