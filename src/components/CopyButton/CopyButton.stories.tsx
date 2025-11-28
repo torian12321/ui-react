@@ -1,5 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 
+import { docImport } from 'src/utils/storybook';
+
 import { CopyButton } from './CopyButton';
 
 const meta: Meta = {
@@ -7,6 +9,11 @@ const meta: Meta = {
   component: CopyButton,
   parameters: {
     layout: 'centered',
+    docs: {
+      description: {
+        component: docImport('components', 'CopyButton'),
+      },
+    },
   },
   tags: ['autodocs'],
   args: { text: 'Copy' },

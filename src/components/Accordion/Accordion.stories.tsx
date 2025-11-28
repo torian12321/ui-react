@@ -4,6 +4,7 @@ import MuiDeleteIcon from '@mui/icons-material/Delete';
 import type { Meta, StoryObj } from '@storybook/react-vite';
 
 import { Button } from 'src/components';
+import { docImport } from 'src/utils/storybook';
 
 import type { AccordionProps } from './Accordion.types';
 import {
@@ -18,6 +19,13 @@ const meta = {
   title: 'Components/Accordion',
   component: Accordion,
   tags: ['autodocs'],
+  parameters: {
+    docs: {
+      description: {
+        component: docImport('components', 'Accordion'),
+      },
+    },
+  },
 } satisfies Meta<typeof Accordion>;
 
 export default meta;

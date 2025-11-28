@@ -1,6 +1,7 @@
 import type { Meta, StoryFn, StoryObj } from '@storybook/react-vite';
 
 import { Button } from 'src/components';
+import { docImport } from 'src/utils/storybook';
 
 import { Tooltip } from './Tooltip';
 import type { TooltipTypes } from './Tooltip.types';
@@ -10,6 +11,11 @@ const meta = {
   component: Tooltip,
   parameters: {
     layout: 'centered',
+    docs: {
+      description: {
+        component: docImport('components', 'Tooltip'),
+      },
+    },
   },
   tags: ['autodocs'],
 } satisfies Meta<typeof Tooltip>;

@@ -2,6 +2,7 @@ import { useState } from 'react';
 import type { Meta } from '@storybook/react-vite';
 
 import { Button } from 'src/components';
+import { docImport } from 'src/utils/storybook';
 
 import { Tabs } from './Tabs';
 import type { TabsProps } from './Tabs.types';
@@ -11,6 +12,13 @@ const meta = {
   title: 'Components/Tabs',
   component: Tabs,
   tags: ['autodocs'],
+  parameters: {
+    docs: {
+      description: {
+        component: docImport('components', 'Tabs'),
+      },
+    },
+  },
 } satisfies Meta<typeof Tabs>;
 
 export default meta;
