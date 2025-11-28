@@ -1,6 +1,7 @@
 export default {
   copyButton: {
     defaultLabel: 'Copy',
+    defaultTooltip: 'Copy to clipboard',
     successMessage: 'Text copied to clipboard!',
   },
   modal: {

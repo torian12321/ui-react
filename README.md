@@ -58,5 +58,4 @@ const MyComplexComponent = (
 ## TODO:
 
 - Extend documentation.
-- Add global path to `src/`.
 - Consider to use [react-popper](https://popper.js.org/react-popper/) to replace MUITooltips.
