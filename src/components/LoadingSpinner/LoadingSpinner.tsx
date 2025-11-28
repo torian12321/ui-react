@@ -1,6 +1,9 @@
 import type { JSX } from 'react';
+import MuiBox from '@mui/material/Box';
 
-import { Circle, Wrapper } from './LoadingSpinner.styles';
+import { combineSxStyles } from 'src/utils';
+
+import { circleStyles, wrapperStyles } from './LoadingSpinner.styles';
 import type { LoadingSpinnerProps } from './LoadingSpinner.types';
 
 export const LoadingSpinner = ({
@@ -9,7 +12,12 @@ export const LoadingSpinner = ({
   sx,
 }: LoadingSpinnerProps): JSX.Element | null =>
   show ? (
-    <Wrapper role='status' data-testid={dataTestid} sx={sx}>
-      <Circle />
-    </Wrapper>
+    <MuiBox
+      component='div'
+      role='status'
+      data-testid={dataTestid}
+      sx={combineSxStyles(wrapperStyles, sx)}
+    >
+      <MuiBox component='div' sx={circleStyles} />
+    </MuiBox>
   ) : null;

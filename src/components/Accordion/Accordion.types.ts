@@ -38,8 +38,8 @@ export type IconButtonProps = ComponentWithTestId &
 
 /** Use the `ref` prop to access internal <Accordion /> actions. */
 export type AccordionRef = {
-  expand: () => void;
-  collapse: () => void;
-  toggle: () => void;
+  expand: VoidFunction;
+  collapse: VoidFunction;
+  toggle: VoidFunction;
   isOpen: boolean;
 };
