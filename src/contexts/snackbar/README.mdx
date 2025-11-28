@@ -1,0 +1,21 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title='Contexts/SnackbarProvider/Introduction' />
+
+# SnackbarProvider
+
+SnackbarProvider uses internally [notistack](https://iamhosseindhv.github.io/notistack/).
+
+## How to use
+
+```jsx
+import { Provider, showMessageInfo } from '@propylon/ui';
+
+const App = () => (
+  <Provider>
+    <button onClick={() => showMessageInfo('That was easy!')}>
+      Show snackbar
+    </button>
+  </Provider>
+);
+```

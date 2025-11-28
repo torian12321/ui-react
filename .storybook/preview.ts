@@ -1,4 +1,15 @@
-import type { Parameters, Preview } from '@storybook/react-vite';
+import type {
+  ArgTypes,
+  Decorator,
+  Parameters,
+  Preview,
+} from '@storybook/react-vite';
+
+import { DEFAULT_LANGUAGE, DEFAULT_THEME } from '../src/constants';
+import type { AppLanguages, AppThemeNames } from '../src/types/app.types';
+import { DecoratorWithProvider } from './decorator-with-provider';
+
+export const decorators: Decorator[] = [DecoratorWithProvider];
 
 export const preview: Preview = {
   parameters: {
@@ -24,6 +35,46 @@ export const parameters: Parameters = {
         'Contexts',
       ],
       locales: 'en-US',
+    },
+  },
+};
+
+type LangOption = { value: AppLanguages; title: string };
+const langOptions: LangOption[] = [
+  { value: 'en', title: 'English' },
+  { value: 'es', title: 'Spanish' },
+];
+
+type ThemeOption = { value: AppThemeNames; title: string };
+const themeOptions: ThemeOption[] = [
+  { value: 'light', title: '⚪ Light' },
+  { value: 'dark', title: '⚫ Dark' },
+  { value: 'pink', title: '🩷 Pink' },
+  { value: 'blue', title: '🔵 Blue' },
+  { value: 'green', title: '🟢 Green' },
+  { value: 'propylon', title: '♾️ Propylon' },
+  { value: 'sc', title: '🌴 South Carolina' },
+];
+
+export const globalTypes: ArgTypes = {
+  locale: {
+    name: 'Locale',
+    description: 'Internationalization locale',
+    defaultValue: DEFAULT_LANGUAGE,
+    toolbar: {
+      icon: 'globe',
+      dynamicTitle: true,
+      items: langOptions,
+    },
+  },
+  theme: {
+    name: 'Theme',
+    description: 'Global theme for components',
+    defaultValue: DEFAULT_THEME,
+    toolbar: {
+      icon: 'paintbrush',
+      dynamicTitle: true,
+      items: themeOptions,
     },
   },
 };
