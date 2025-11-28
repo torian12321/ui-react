@@ -1,6 +1,8 @@
 import type { Meta, StoryFn, StoryObj } from '@storybook/react-vite';
 import { fn } from 'storybook/test';
 
+import { docImport } from 'src/utils/storybook';
+
 import { Chip } from './Chip';
 
 const meta: Meta = {
@@ -8,6 +10,11 @@ const meta: Meta = {
   component: Chip,
   parameters: {
     layout: 'centered',
+    docs: {
+      description: {
+        component: docImport('components', 'Chip'),
+      },
+    },
   },
   tags: ['autodocs'],
   args: { label: 'Chip label' },
