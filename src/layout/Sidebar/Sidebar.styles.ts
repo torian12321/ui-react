@@ -16,10 +16,6 @@ export const Wrapper = styled(MuiDrawer)<WrapperProps>(({ theme, open }) => ({
     duration: theme.transitions.duration.leavingScreen,
   }),
 
-  '& .MuiDrawer-paper': {
-    overflow: 'hidden',
-    background: theme.palette.primary.dark,
-  },
   '& > div': {
     position: 'initial',
   },

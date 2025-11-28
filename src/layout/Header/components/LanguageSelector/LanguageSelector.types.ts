@@ -1,5 +1,4 @@
-import type { ComponentWithTestId } from 'src/types';
-import type { AppLanguages } from 'src/types/app.types';
+import type { AppLanguages, ComponentWithTestId } from 'src/types';
 
 export type LanguageOptionDetails = {
   label: string;

@@ -2,7 +2,7 @@ import { create } from 'zustand';
 import { createJSONStorage, devtools, persist } from 'zustand/middleware';
 
 import { DEFAULT_LANGUAGE, DEFAULT_THEME } from 'src/constants';
-import type { AppLanguages, AppThemeNames } from 'src/types/app.types';
+import type { AppLanguages, AppThemeNames } from 'src/types';
 
 import type { AppState } from './appStore.types';
 

@@ -4,7 +4,6 @@ export const wrapperStyles: SxProps<Theme> = {
   gridArea: 'header',
   position: 'relative',
   textAlign: 'left',
-  background: theme => theme.palette.background.paper,
   color: theme => theme.palette.text.primary,
   boxShadow: theme => theme.shadows[5],
   zIndex: theme => theme.zIndex.drawer + 2,

@@ -6,7 +6,7 @@ import type {
 } from '@storybook/react-vite';
 
 import { DEFAULT_LANGUAGE, DEFAULT_THEME } from '../src/constants';
-import type { AppLanguages, AppThemeNames } from '../src/types/app.types';
+import type { AppLanguages, AppThemeNames } from '../src/types';
 import { DecoratorWithProvider } from './decorator-with-provider';
 
 export const decorators: Decorator[] = [DecoratorWithProvider];
@@ -54,6 +54,7 @@ const themeOptions: ThemeOption[] = [
   { value: 'green', title: '🟢 Green' },
   { value: 'propylon', title: '♾️ Propylon' },
   { value: 'sc', title: '🌴 South Carolina' },
+  { value: 'ny', title: '🗽 New York' },
 ];
 
 export const globalTypes: ArgTypes = {

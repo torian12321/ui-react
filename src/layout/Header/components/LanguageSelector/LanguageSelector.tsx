@@ -3,7 +3,7 @@ import LanguageSharpIcon from '@mui/icons-material/LanguageSharp';
 
 import { useSetAppLang } from 'src/contexts';
 import { useLocalization } from 'src/localization';
-import type { AppLanguages } from 'src/types/app.types';
+import type { AppLanguages } from 'src/types';
 
 import { OptionsSelector } from '../OptionsSelector';
 import type { LanguageSelectorProps } from './LanguageSelector.types';

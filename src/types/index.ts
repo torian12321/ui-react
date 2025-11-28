@@ -2,13 +2,17 @@ import type { SxProps, Theme } from '@mui/material/styles';
 
 export type AppLanguages = 'en' | 'es';
 export type AppThemeNames =
+  // Base themes
   | 'light'
   | 'dark'
+  // Color themes
   | 'pink'
   | 'green'
   | 'blue'
+  // Client themes
+  | 'propylon'
   | 'sc'
-  | 'propylon';
+  | 'ny';
 
 export type ComponentWithTestId = {
   'data-testid'?: string;

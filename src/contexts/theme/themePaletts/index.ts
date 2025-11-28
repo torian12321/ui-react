@@ -1,11 +1,12 @@
 import { ThemeOptions } from '@mui/material/styles';
 
-import { AppThemeNames } from 'src/types/app.types';
+import { AppThemeNames } from 'src/types';
 
 import { themePaletteBlue } from './themePaletteBlue';
 import { themePaletteDark } from './themePaletteDark';
 import { themePaletteGreen } from './themePaletteGreen';
 import { themePaletteLight } from './themePaletteLight';
+import { themePaletteNy } from './themePaletteNy';
 import { themePalettePink } from './themePalettePink';
 import { themePalettePropylon } from './themePalettePropylon';
 import { themePaletteSc } from './themePaletteSc';
@@ -25,6 +26,7 @@ const themes: Record<AppThemeNames, ThemeOptions> = {
   // Client Themes
   propylon: themePalettePropylon,
   sc: themePaletteSc,
+  ny: themePaletteNy,
 };
 
 export const getThemeStyles = (theme: AppThemeNames = 'light'): ThemeOptions =>

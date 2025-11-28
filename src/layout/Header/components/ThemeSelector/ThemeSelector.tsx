@@ -3,7 +3,7 @@ import ContrastIcon from '@mui/icons-material/Contrast';
 
 import { useSetAppTheme } from 'src/contexts';
 import { useLocalization } from 'src/localization';
-import type { AppThemeNames } from 'src/types/app.types';
+import type { AppThemeNames } from 'src/types';
 
 import { OptionsSelector } from '../OptionsSelector';
 import type { ThemeSelectorProps } from './ThemeSelector.types';

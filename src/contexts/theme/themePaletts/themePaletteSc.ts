@@ -1,10 +1,9 @@
 import { createTheme } from '@mui/material/styles';
 
+import { themeCore } from './core';
+
 /**  South Carolina theme */
-export const themePaletteSc = createTheme({
-  typography: {
-    fontFamily: 'Open Sans, sans-serif',
-  },
+export const themePaletteSc = createTheme(themeCore, {
   palette: {
     primary: {
       main: '#0c1a4e',
@@ -16,6 +15,7 @@ export const themePaletteSc = createTheme({
       light: '#f2b333',
       main: '#efa000',
       dark: '#ffa726',
+      contrastText: '#fff',
     },
     background: {
       default: '#eee',

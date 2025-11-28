@@ -1,13 +1,9 @@
 import { createTheme } from '@mui/material/styles';
 
-import { themeTypographyVariants } from './sharedThemeValues';
+import { themeCore } from './core';
 
 /** Base theme */
-export const themePaletteLight = createTheme({
-  typography: {
-    fontFamily: 'Open Sans, sans-serif',
-    ...themeTypographyVariants,
-  },
+export const themePaletteLight = createTheme(themeCore, {
   palette: {
     mode: 'light',
     primary: {

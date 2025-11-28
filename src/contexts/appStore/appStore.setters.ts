@@ -1,4 +1,4 @@
-import type { AppLanguages, AppThemeNames } from 'src/types/app.types';
+import type { AppLanguages, AppThemeNames } from 'src/types';
 
 import { useAppStore } from './appStore';
 

@@ -1,5 +1,4 @@
-import type { ComponentWithTestId } from 'src/types';
-import type { AppThemeNames } from 'src/types/app.types';
+import type { AppThemeNames, ComponentWithTestId } from 'src/types';
 
 export type ThemeOptionDetails = {
   label: string;

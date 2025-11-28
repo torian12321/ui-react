@@ -1,9 +1,8 @@
 import { createTheme } from '@mui/material/styles';
 
-export const themePaletteDark = createTheme({
-  typography: {
-    fontFamily: 'Open Sans, sans-serif',
-  },
+import { themeCore } from './core';
+
+export const themePaletteDark = createTheme(themeCore, {
   palette: {
     mode: 'dark',
     primary: {
