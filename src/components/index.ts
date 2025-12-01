@@ -5,6 +5,7 @@ export * from './Button';
 export * from './Chip';
 export * from './CompanyLogo';
 export * from './CopyButton';
+export * from './form/Switch';
 export * from './IconButton';
 export * from './LoadingBar';
 export * from './LoadingSpinner';

@@ -1,5 +1,10 @@
 import { useState } from 'react';
-import type { Decorator, Meta, StoryObj } from '@storybook/react-vite';
+import type {
+  Decorator,
+  Meta,
+  StoryContext,
+  StoryObj,
+} from '@storybook/react-vite';
 import { action } from 'storybook/actions';
 import { fn } from 'storybook/test';
 
@@ -8,8 +13,11 @@ import { docImport } from 'src/utils/storybook';
 import { SearchBar } from './SearchBar';
 import type { SearchBarProps } from './SearchBar.types';
 
-// eslint-disable-next-line @typescript-eslint/naming-convention
-const StateDecorator: Decorator<SearchBarProps> = (Story, context) => {
+const StateDecorator: Decorator<SearchBarProps> = (
+  // eslint-disable-next-line @typescript-eslint/naming-convention
+  Story,
+  context: StoryContext<SearchBarProps>,
+) => {
   const [value, setValue] = useState('');
 
   const handleChange = (newValue: string) => {
