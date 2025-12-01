@@ -16,7 +16,7 @@ const meta: Meta = {
     },
   },
   tags: ['autodocs'],
-  args: { text: 'Copy' },
+  args: { text: 'I am demo text to be copied' },
 } satisfies Meta<typeof CopyButton>;
 
 export default meta;
@@ -24,15 +24,8 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {};
 
-export const WithDefaultLabel: Story = {
+export const Disabled: Story = {
   args: {
-    text: 'I am text that will be copied',
-  },
-};
-
-export const WithCustomLabel: Story = {
-  args: {
-    text: 'I am text that will be copied',
-    label: 'Click Here To Copy',
+    disabled: true,
   },
 };

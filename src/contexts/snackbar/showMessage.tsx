@@ -1,3 +1,4 @@
+import type { Theme } from '@mui/material';
 import type { VariantType } from 'notistack';
 import { enqueueSnackbar } from 'notistack';
 
@@ -61,7 +62,12 @@ const showMessage = (
     preventDuplicate: true,
     action: key => (
       <>
-        {textToCopy && <CopyButton text={textToCopy} />}
+        {textToCopy && (
+          <CopyButton
+            text={textToCopy}
+            sx={{ color: (theme: Theme) => theme.palette.error.contrastText }}
+          />
+        )}
         <DismissButton id={key} show={showDismissBtn} />
       </>
     ),

@@ -33,6 +33,7 @@ export const palette: PaletteOptions = {
     main: '#D32F2F',
     dark: '#C62828',
     light: '#EF5350',
+    contrastText: '#fff',
   },
   background: {
     default: '#F0F3F8',

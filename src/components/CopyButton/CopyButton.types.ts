@@ -1,7 +1,8 @@
-export type CopyButtonProps = {
-  text: string;
-  label?: string;
-  variant?: 'text' | 'outlined' | 'contained';
-  color?: 'primary' | 'secondary' | 'info' | 'success' | 'warning' | 'error';
-  size?: 'small' | 'medium' | 'large';
-};
+import type { ComponentWithStyles, ComponentWithTestId } from 'src/types';
+
+export type CopyButtonProps = ComponentWithTestId &
+  ComponentWithStyles & {
+    /** The text to be copied to the clipboard */
+    text: string;
+    disabled?: boolean;
+  };
