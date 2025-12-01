@@ -1,33 +1,19 @@
 import { createTheme, ThemeOptions } from '@mui/material/styles';
 
-import { themeCore } from './core';
+import { themeCore } from '../core';
+import { palette } from '../palettes/themePalettePink';
 
-export const themePalettePink: ThemeOptions = createTheme(themeCore, {
+export const themePink: ThemeOptions = createTheme(themeCore, {
+  palette,
+
+  // Override typography
   typography: {
     fontFamily: 'Courier, monospace',
   },
+  // Override shape
   shape: {
     borderRadius: 12,
   },
-  palette: {
-    mode: 'light',
-    primary: {
-      main: '#F5097F',
-      dark: '#C20766',
-      light: '#F73D93',
-      contrastText: '#fff',
-    },
-    secondary: {
-      main: '#19F2AC',
-      dark: '#14C28A',
-      light: '#1BF5B3',
-      contrastText: '#fff',
-    },
-    background: {
-      default: '#f0f0f7',
-    },
-  },
-
   // Override theme components
   components: {
     MuiAppBar: {

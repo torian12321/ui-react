@@ -7,6 +7,7 @@ export {
   useGetThemeMode,
 } from './theme.selectors';
 export { ThemeProvider } from './ThemeProvider';
+export { ThemeProviderWord } from './ThemeProvider-word';
 
 export const DEFAULT_LOGO_MODE_LIGHT = baseLogoLight;
 export const DEFAULT_LOGO_MODE_DARK = baseLogoDark;

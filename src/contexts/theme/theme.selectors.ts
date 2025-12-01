@@ -3,7 +3,7 @@ import type { ThemeOptions } from '@mui/material/styles';
 
 import { useGetAppTheme } from 'src/contexts/appStore';
 
-import { getThemeStyles } from './themePaletts';
+import { getThemeStyles } from './theme';
 
 export const useGetTheme = (): ThemeOptions => {
   const themeName = useGetAppTheme();

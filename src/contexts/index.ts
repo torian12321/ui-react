@@ -7,6 +7,7 @@ export {
   useShowAppLoader,
 } from './appStore';
 export { Provider } from './Provider';
+export { ProviderWord } from './Provider-word';
 export {
   showMessageError,
   showMessageInfo,
