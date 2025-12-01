@@ -3,9 +3,16 @@
  * This is necessary to avoid type errors when using the icons in the project
  */
 declare module '@mui/icons-material/*' {
-  import { ComponentType } from 'react';
-  import { SvgIconProps } from '@mui/material/SvgIcon';
+  import type { ComponentType } from 'react';
+  import type { SvgIconProps } from '@mui/material/SvgIcon';
 
   const Icon: ComponentType<SvgIconProps> & { muiName: string };
   export default Icon;
+}
+
+declare module '@mui/icons-material' {
+  import type { ComponentType } from 'react';
+  import type { SvgIconProps } from '@mui/material/SvgIcon';
+
+  export type SvgIconComponent = ComponentType<SvgIconProps>;
 }

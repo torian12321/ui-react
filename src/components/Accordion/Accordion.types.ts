@@ -1,5 +1,5 @@
 import type { MouseEvent, ReactElement } from 'react';
-import type SvgIcon from '@mui/material/SvgIcon';
+import type { SvgIconComponent } from '@mui/icons-material';
 
 import type { ComponentWithStyles, ComponentWithTestId } from 'src/types';
 
@@ -30,7 +30,7 @@ export type IconButtonProps = ComponentWithTestId &
   ComponentWithStyles & {
     label: string;
     /** Icon from "@mui/icons-material" */
-    icon?: typeof SvgIcon;
+    icon?: SvgIconComponent;
     disabled?: boolean;
     highlighted?: boolean;
     onClick: (event?: MouseEvent<HTMLButtonElement>) => void;

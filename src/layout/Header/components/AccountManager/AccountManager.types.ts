@@ -1,11 +1,11 @@
-import type SvgIcon from '@mui/material/SvgIcon';
+import type { SvgIconComponent } from '@mui/icons-material';
 
 import type { ComponentWithStyles, ComponentWithTestId } from 'src/types';
 
 type Action = {
   label: string;
   /** Icon from "@mui/icons-material" */
-  icon?: typeof SvgIcon;
+  icon?: SvgIconComponent;
   group?: string;
   onClick: VoidFunction;
 };

@@ -1,4 +1,4 @@
-import type SvgIcon from '@mui/material/SvgIcon';
+import type { SvgIconComponent } from '@mui/icons-material';
 
 import type { ComponentWithStyles, MuiStyles } from 'src/types';
 
@@ -6,7 +6,7 @@ export type TabLabelDetails = {
   id: string;
   label: string;
   /** Icon from "@mui/icons-material" */
-  icon?: typeof SvgIcon;
+  icon?: SvgIconComponent;
   disabled?: boolean;
 };
 

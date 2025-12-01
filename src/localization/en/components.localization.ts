@@ -18,4 +18,7 @@ export default {
       clear: 'Clear',
     },
   },
+  iconButtonGroup: {
+    moreOptions: 'More options',
+  },
 };

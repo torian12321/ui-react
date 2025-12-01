@@ -1,4 +1,4 @@
-import type SvgIcon from '@mui/material/SvgIcon';
+import type { SvgIconComponent } from '@mui/icons-material';
 
 import type { ComponentWithStyles, ComponentWithTestId } from 'src/types';
 
@@ -15,7 +15,7 @@ export type ButtonProps = ComponentWithTestId &
     disabled?: boolean;
     loading?: boolean;
     show?: boolean;
-    startIcon?: typeof SvgIcon;
+    startIcon?: SvgIconComponent;
     onClick?: VoidFunction;
   };
 
