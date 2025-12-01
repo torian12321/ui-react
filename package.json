@@ -1,6 +1,6 @@
 {
   "name": "@torian12321/ui-react",
-  "version": "0.0.1-beta.2",
+  "version": "0.0.1-beta.3",
   "type": "module",
   "prettier": "@torian12321/prettier-config",
   "scripts": {
@@ -29,6 +29,11 @@
       "types": "./dist/components.d.ts",
       "import": "./dist/components.js",
       "require": "./dist/components.cjs"
+    },
+    "./contexts": {
+      "types": "./dist/contexts.d.ts",
+      "import": "./dist/contexts.js",
+      "require": "./dist/contexts.cjs"
     },
     "./layout": {
       "types": "./dist/layout.d.ts",

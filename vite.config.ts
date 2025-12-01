@@ -13,6 +13,7 @@ export default defineConfig({
       formats: ['es', 'cjs'],
       entry: {
         components: resolve(__dirname, 'src/components/index.ts'),
+        contexts: resolve(__dirname, 'src/contexts/index.ts'),
         layout: resolve(__dirname, 'src/layout/index.ts'),
         views: resolve(__dirname, 'src/views/index.ts'),
       },
