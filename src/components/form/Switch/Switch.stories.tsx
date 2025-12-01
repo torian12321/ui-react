@@ -32,7 +32,7 @@ const StateDecorator: Decorator<SwitchProps> = (
   );
 };
 
-const meta: Meta = {
+const meta: Meta<SwitchProps> = {
   title: 'Components/form/Switch',
   component: Switch,
   decorators: [StateDecorator],
@@ -45,7 +45,7 @@ const meta: Meta = {
     },
   },
   tags: ['autodocs'],
-} satisfies Meta<SwitchProps>;
+};
 
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -58,7 +58,7 @@ export const WithLabel: Story = {
 };
 export const WithSliderStyles: Story = {
   args: {
-    sxSlider: {
+    sxToggle: {
       /** Font size controls component size */
       fontSize: '60px',
       background: 'orange',
