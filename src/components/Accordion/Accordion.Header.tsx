@@ -4,7 +4,8 @@ import MuiAccordionSummary from '@mui/material/AccordionSummary';
 import MuiBox from '@mui/material/Box';
 import MuiTypography from '@mui/material/Typography';
 
-import { useCombineSxStyles } from '../../utils/useCombineSxStyles';
+import { useCombineSxStyles } from 'src/utils';
+
 import {
   headerActionsStyles,
   headerStyles,

@@ -1,4 +1,4 @@
-import type { JSX } from 'react';
+import type SvgIcon from '@mui/material/SvgIcon';
 
 import type { ComponentWithStyles, ComponentWithTestId } from 'src/types';
 
@@ -15,8 +15,8 @@ export type ButtonProps = ComponentWithTestId &
     disabled?: boolean;
     loading?: boolean;
     show?: boolean;
+    startIcon?: typeof SvgIcon;
     onClick?: VoidFunction;
-    startIcon?: JSX.Element;
   };
 
 export type ButtonGroupProps = ComponentWithStyles & {

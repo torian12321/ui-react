@@ -5,6 +5,8 @@
   "compilerOptions": {
     "baseUrl": ".",
     "jsx": "react-jsx",
+    "moduleResolution": "bundler",
+    "skipLibCheck": true,
     "paths": {
       "src/*": ["src/*"]
     }
