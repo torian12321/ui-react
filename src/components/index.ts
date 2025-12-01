@@ -7,5 +7,6 @@ export * from './CompanyLogo';
 export * from './CopyButton';
 export * from './LoadingBar';
 export * from './LoadingSpinner';
+export * from './Modal';
 export * from './Tabs';
 export * from './Tooltip';

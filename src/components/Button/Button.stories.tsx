@@ -38,16 +38,17 @@ export const Loading: Story = {
   },
 };
 
-export const OutlineStyle: Story = ({ ...args }) => (
-  <Button.Group>
-    <Button {...args}>Default</Button>
-    <Button primary {...args}>
-      Primary
-    </Button>
-  </Button.Group>
-);
-OutlineStyle.args = {
-  outline: true,
+export const OutlineStyle: Story = {
+  render: ({ outline = true, ...rest }) => (
+    <Button.Group>
+      <Button outline={outline} {...rest}>
+        Default
+      </Button>
+      <Button primary {...rest}>
+        Primary
+      </Button>
+    </Button.Group>
+  ),
 };
 
 export const Sizes: StoryFn<Story> = ({ ...args }) => (
