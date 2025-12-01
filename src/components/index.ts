@@ -9,5 +9,6 @@ export * from './IconButton';
 export * from './LoadingBar';
 export * from './LoadingSpinner';
 export * from './Modal';
+export * from './SearchBar';
 export * from './Tabs';
 export * from './Tooltip';
