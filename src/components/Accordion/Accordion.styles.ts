@@ -11,17 +11,6 @@ export const groupStyles: SxProps<Theme> = {
 };
 
 export const wrapperStyles: SxProps<Theme> = {
-  overflow: 'hidden',
-
-  borderRadius: 1,
-  border: theme => `1px solid ${theme.palette.divider}`,
-  backgroundColor: theme => theme.palette.background.paper,
-
-  // Header styles
-  '& .MuiAccordionSummary-root': {
-    transition: 'background .4s, opacity .4s',
-  },
-
   '&[data-highlighted="true"]': {
     borderColor: theme => alpha(theme.palette.primary.main, 0.4),
 
@@ -32,13 +21,6 @@ export const wrapperStyles: SxProps<Theme> = {
 };
 
 export const headerWrapperStyles: SxProps<Theme> = {
-  background: theme => theme.palette.background.default,
-  flexDirection: 'row-reverse',
-
-  '& .MuiAccordionSummary-content': {
-    margin: 0,
-  },
-
   '.MuiAccordionSummary-expandIconWrapper': {
     borderRadius: '50%',
     transition: 'background .4s, transform .2s',
@@ -67,10 +49,6 @@ export const headerActionsStyles: SxProps<Theme> = {
   flexWrap: 'nowrap',
   alignItems: 'center',
   gap: 0.5,
-};
-
-export const bodyStyles: SxProps<Theme> = {
-  backgroundColor: theme => theme.palette.background.paper,
 };
 
 export const centeredStyles: SxProps<Theme> = {
