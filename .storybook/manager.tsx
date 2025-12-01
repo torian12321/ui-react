@@ -16,8 +16,8 @@ addons.setConfig({
     colorPrimary: '#8353fd',
     colorSecondary: '#3e016f',
 
-    buttonBg: '#c39dff',
-    buttonBorder: '#8353fd',
+    buttonBg: '#eeddff', //'#c39dff',
+    buttonBorder: '#c39dff',
 
     booleanSelectedBg: '#c39dff',
     booleanBg: '#eeddff',
@@ -37,7 +37,7 @@ addons.setConfig({
     // barTextColor: '#eeddff',
     barSelectedColor: '#3e016f',
     barHoverColor: '#3e016f',
-    barBg: '#eeddff',
+    barBg: '#f3eef9', // '#eeddff',
 
     // Form colors
     // inputBg: '#ffffff',
