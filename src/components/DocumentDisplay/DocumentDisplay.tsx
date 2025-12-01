@@ -1,3 +1,4 @@
+import type { JSX } from 'react';
 import MuiBox from '@mui/material/Box';
 import MuiPaper from '@mui/material/Paper';
 import MuiTypography from '@mui/material/Typography';
@@ -13,7 +14,7 @@ export const DocumentDisplay = ({
   'data-testid': dataTestid,
   sx,
   sxContent,
-}: DocumentDisplayProps) => {
+}: DocumentDisplayProps): JSX.Element => {
   const sxStyles = useCombineSxStyles(wrapperStyles, sx);
   const sxContentStyles = useCombineSxStyles(contentStyles, sxContent);
   const isValidHtml = isValidHtmlContent(content);

@@ -21,4 +21,7 @@ export default {
   iconButtonGroup: {
     moreOptions: 'More options',
   },
+  loadingBar: {
+    defaultLabel: 'Loading...',
+  },
 };
