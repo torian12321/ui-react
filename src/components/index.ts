@@ -10,6 +10,7 @@ export * from './form/Dropdown';
 export * from './form/Switch';
 export * from './IconButton';
 export * from './IconButtonGroup';
+export * from './LabeledContent';
 export * from './LoadingBar';
 export * from './LoadingSpinner';
 export * from './Modal';
