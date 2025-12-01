@@ -1,5 +1,6 @@
 import type { PropsWithChildren } from 'react';
 import { ThemeProvider } from '@mui/material/styles';
+
 import { themeWord } from './theme/themeWord';
 
 /**

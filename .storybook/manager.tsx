@@ -13,39 +13,36 @@ addons.setConfig({
     fontBase: '"Open Sans", sans-serif',
     fontCode: 'monospace',
 
-    // colorPrimary: '#3e016f',
-    // colorSecondary: '#e60054',
-    // colorSecondary: '#cccccc',
+    colorPrimary: '#8353fd',
+    colorSecondary: '#3e016f',
 
-    // buttonBg: '#e60054', //'#ffffff',
-    // buttonBorder: '#e60054', //'#ffffff',
-    buttonBg: '#ffffff',
-    buttonBorder: '#ffffff',
-    booleanBg: '#e3dbf5',
-    // booleanSelectedBg: '#8151f9',
-    textInverseColor: '#00ff00',
+    buttonBg: '#c39dff',
+    buttonBorder: '#8353fd',
+
+    booleanSelectedBg: '#c39dff',
+    booleanBg: '#eeddff',
 
     // UI
     // appBg: '#ffffff',
     // appContentBg: '#ffffff',
     // appPreviewBg: '#ffffff',
-    // appBorderColor: '#3e016f',
-    // appBorderRadius: 4,
+    appBorderColor: '#f1edf5',
+    appBorderRadius: 4,
 
     // Text colors
     textColor: '#10162F',
     // textInverseColor: '#ffffff',
 
     // Toolbar default and active colors
-    barTextColor: '#eeddff',
-    barSelectedColor: '#ffffff',
-    barHoverColor: '#ffffff',
-    // barBg: '#8151f9',
+    // barTextColor: '#eeddff',
+    barSelectedColor: '#3e016f',
+    barHoverColor: '#3e016f',
+    barBg: '#eeddff',
 
     // Form colors
-    inputBg: '#ffffff',
-    inputBorder: '#10162F',
-    inputTextColor: '#10162F',
-    inputBorderRadius: 2,
+    // inputBg: '#ffffff',
+    // inputBorder: '#10162F',
+    // inputTextColor: '#10162F',
+    // inputBorderRadius: 2,
   }),
 });

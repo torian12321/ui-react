@@ -17,7 +17,6 @@ export const useGetThemeOptions = (
   options: ThemeOptions[],
 ): ThemeOptionDetails[] => {
   const l10n = useLocalization();
-  // const { options: themeNames } = l10n.layout.themeSelector;
 
   return useMemo(
     () =>

@@ -2,9 +2,12 @@ import type { SxProps, Theme } from '@mui/material/styles';
 
 export type AppLanguages = 'en' | 'es';
 export type AppThemeNames =
-  // Base themes
+  // 360Base themes (legacy)
   | 'light'
   | 'dark'
+  // RWS themes (new)
+  | 'rws'
+  | 'rwsDark'
   // Color themes
   | 'pink'
   | 'green'

@@ -2,6 +2,7 @@ export const fontFamily = 'Open Sans, sans-serif';
 
 export const typography = {
   fontFamily,
+  fontCode: 'monospace',
   h1: {
     fontWeight: 600,
     fontSize: '2.074rem',

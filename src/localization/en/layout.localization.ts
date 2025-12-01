@@ -15,11 +15,14 @@ export default {
     options: {
       light: 'Light',
       dark: 'Dark',
+      rws: 'Light RWS',
+      rwsDark: 'Dark RWS',
       pink: 'Pink',
       green: 'Green',
       blue: 'Blue',
       sc: 'South Carolina',
       propylon: 'Propylon',
+      ny: 'New York',
     },
   },
 };

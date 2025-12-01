@@ -49,6 +49,8 @@ type ThemeOption = { value: AppThemeNames; title: string };
 const themeOptions: ThemeOption[] = [
   { value: 'light', title: '⚪ Light' },
   { value: 'dark', title: '⚫ Dark' },
+  { value: 'rws', title: '◻️ RWS' },
+  { value: 'rwsDark', title: '◼️ RWS Dark' },
   { value: 'pink', title: '🩷 Pink' },
   { value: 'blue', title: '🔵 Blue' },
   { value: 'green', title: '🟢 Green' },

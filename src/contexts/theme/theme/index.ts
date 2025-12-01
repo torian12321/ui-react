@@ -9,14 +9,20 @@ import { themeLight } from './themeLight';
 import { themeNy } from './themeNy';
 import { themePink } from './themePink';
 import { themePropylon } from './themePropylon';
+import { themeRwsDark } from './themeRwsDark';
+import { themeRwsLight } from './themeRwsLight';
 import { themeSc } from './themeSc';
 
 export const DEFAULT_THEME = themeLight;
 
 const themes: Record<AppThemeNames, ThemeOptions> = {
-  // Base themes
+  // 360Base themes (legacy)
   light: themeLight,
   dark: themeDark,
+
+  // RWS themes (new)
+  rws: themeRwsLight,
+  rwsDark: themeRwsDark,
 
   // Color themes
   pink: themePink,
