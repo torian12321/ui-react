@@ -9,11 +9,20 @@ import { fn } from 'storybook/test';
 
 import { mockText } from './__mock__';
 import { TextareaSearchable } from './TextareaSearchable';
+import { docImport } from 'src/utils/storybook';
 
 const meta = {
   title: 'Components/TextareaSearchable',
   component: TextareaSearchable,
   tags: ['autodocs'],
+  parameters: {
+    layout: 'centered',
+    docs: {
+      description: {
+        component: docImport('components', 'TextareaSearchable'),
+      },
+    },
+  },
   args: {
     text: mockText,
   },
