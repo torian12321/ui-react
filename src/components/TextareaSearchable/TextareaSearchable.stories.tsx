@@ -1,15 +1,14 @@
-import {
-  AddLocationAlt as AddLocationAltIcon,
-  CopyAll as CopyAllIcon,
-  Search as SearchIcon,
-  YouTube as YouTubeIcon,
-} from '@mui/icons-material';
+import MuiIconLocation from '@mui/icons-material/AddLocationAlt';
+import MuiIconCopyAll from '@mui/icons-material/CopyAll';
+import MuiIconSearch from '@mui/icons-material/Search';
+import MuiIconYouTube from '@mui/icons-material/YouTube';
 import { Meta, StoryObj } from '@storybook/react-vite';
 import { fn } from 'storybook/test';
 
+import { docImport } from 'src/utils/storybook';
+
 import { mockText } from './__mock__';
 import { TextareaSearchable } from './TextareaSearchable';
-import { docImport } from 'src/utils/storybook';
 
 const meta = {
   title: 'Components/TextareaSearchable',
@@ -71,17 +70,17 @@ export const WithActions: Story = {
     actions: [
       {
         label: 'Copy',
-        icon: CopyAllIcon,
+        icon: MuiIconCopyAll,
         onClick: () => fn(),
       },
       {
         label: 'Search',
-        icon: SearchIcon,
+        icon: MuiIconSearch,
         onClick: () => fn(),
       },
       {
         label: 'Youtube',
-        icon: YouTubeIcon,
+        icon: MuiIconYouTube,
         sx: {
           color: 'red',
         },
@@ -89,7 +88,7 @@ export const WithActions: Story = {
       },
       {
         label: 'Location',
-        icon: AddLocationAltIcon,
+        icon: MuiIconLocation,
         disabled: true,
         onClick: () => fn(),
       },
