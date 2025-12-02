@@ -1,11 +1,13 @@
+import type { Decorator, StoryContext } from '@storybook/react-vite';
 import MuiBox from '@mui/material/Box';
-import { StoryFn } from '@storybook/react-vite';
+import type { TransferListProps } from '../TransferList.types';
 
-export const StoryDecorator = (
+export const StoryDecorator: Decorator<TransferListProps> = (
   // eslint-disable-next-line @typescript-eslint/naming-convention
-  Story: StoryFn,
+  Story,
+  props: StoryContext<TransferListProps>,
 ) => (
   <MuiBox sx={{ minWidth: 800 }}>
-    <Story />
+    <Story {...props} />
   </MuiBox>
 );
