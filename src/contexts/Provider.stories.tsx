@@ -1,18 +1,26 @@
 import type { Meta } from '@storybook/react-vite';
 
-import { Button } from '../components';
+import { Button } from 'src/components';
+import { docImport } from 'src/utils/storybook';
+
 import { Provider, useHideAppLoader, useShowAppLoader } from './';
 
-const meta = {
+const meta: Meta<typeof Provider> = {
   title: 'Contexts/Provider',
   component: Provider,
+  tags: ['autodocs'],
   parameters: {
     layout: 'centered',
+    docs: {
+      description: {
+        component: docImport('contexts', 'Provider'),
+      },
+    },
   },
-  tags: ['autodocs'],
-} satisfies Meta<typeof Provider>;
+};
 
 export default meta;
+type Story = Meta<typeof Provider>;
 
 const ProviderLoaderExample = () => {
   const delay = (ms: number) => new Promise(res => setTimeout(res, ms));
@@ -47,4 +55,6 @@ const ProviderLoaderExample = () => {
   );
 };
 
-export const AppLoader = ProviderLoaderExample.bind({});
+export const AppLoader: Story = {
+  render: () => <ProviderLoaderExample />,
+};

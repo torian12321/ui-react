@@ -15,7 +15,7 @@ npm install @torian12321/ui-react --save-dev
 To start using the library start by wrapper you application with the Provider.
 
 ```jsx
-import { Provider } from '@torian12321/ui-react';
+import { Provider } from '@torian12321/ui-react/context';
 
 const MyApp = ({ children }) => {
   return <Provider>{children}</Provider>;
@@ -24,19 +24,7 @@ const MyApp = ({ children }) => {
 
 ## Import example
 
-Generic import:
-
-```jsx
-import { Button } from '@torian12321/ui-react';
-
-const MyComplexComponent = (
-  <div>
-    <Button>Click Me</Button>
-  </div>
-);
-```
-
-Components dedicated import:
+Components import:
 
 ```jsx
 import { Button } from '@torian12321/ui-react/components';
