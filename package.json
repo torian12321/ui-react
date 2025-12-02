@@ -30,6 +30,11 @@
       "import": "./dist/components.js",
       "require": "./dist/components.cjs"
     },
+    "./formRenderer": {
+      "types": "./dist/formRenderer.d.ts",
+      "import": "./dist/formRenderer.js",
+      "require": "./dist/formRenderer.cjs"
+    },
     "./contexts": {
       "types": "./dist/contexts.d.ts",
       "import": "./dist/contexts.js",

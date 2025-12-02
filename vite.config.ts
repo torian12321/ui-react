@@ -13,6 +13,10 @@ export default defineConfig({
       formats: ['es', 'cjs'],
       entry: {
         components: resolve(__dirname, 'src/components/index.ts'),
+        formRenderer: resolve(
+          __dirname,
+          'src/components/FormRenderer/index.ts',
+        ),
         contexts: resolve(__dirname, 'src/contexts/index.ts'),
         layout: resolve(__dirname, 'src/layout/index.ts'),
         views: resolve(__dirname, 'src/views/index.ts'),
@@ -30,7 +34,13 @@ export default defineConfig({
     },
   },
   resolve: {
-    alias: [{ find: 'src', replacement: resolve(__dirname, 'src') }],
+    alias: [
+      { find: 'src', replacement: resolve(__dirname, 'src') },
+      {
+        find: 'formRenderer',
+        replacement: resolve(__dirname, 'src/components/FormRenderer'),
+      },
+    ],
   },
   plugins: [
     react(),

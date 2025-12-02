@@ -1,5 +1,6 @@
-import type { Decorator, StoryContext } from '@storybook/react-vite';
 import MuiBox from '@mui/material/Box';
+import type { Decorator, StoryContext } from '@storybook/react-vite';
+
 import type { TransferListProps } from '../TransferList.types';
 
 export const StoryDecorator: Decorator<TransferListProps> = (
