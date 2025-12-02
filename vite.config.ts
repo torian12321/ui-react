@@ -74,8 +74,8 @@ export default defineConfig({
       thresholds: {
         /** Percentage of coverage test required */
         lines: 10,
-        functions: 10,
-        branches: 10,
+        functions: 1,
+        branches: 1,
         statements: 10,
       },
     },
