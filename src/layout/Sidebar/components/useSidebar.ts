@@ -1,11 +1,15 @@
-import { useEffect, useState } from 'react';
+import {
+  useGetAppLayoutState,
+  useSetAppSidebarOpen,
+  useToggleAppSidebar,
+} from 'src/contexts/appStore';
 
 type Actions = {
   toggle: VoidFunction;
   open: VoidFunction;
   close: VoidFunction;
 };
-type UseSidebar = [boolean, Actions];
+type UseSidebar = Actions & { isOpen: boolean };
 
 /**
  * Custom hook to manage the state of a sidebar.
@@ -13,19 +17,15 @@ type UseSidebar = [boolean, Actions];
  * @param {boolean} [value=true] - Initial state of the sidebar, true for open and false for closed.
  * @returns {[boolean, Actions]} - An array containing the current state of the sidebar and actions to manipulate it.
  */
-export const useSidebar = (value: boolean = true): UseSidebar => {
-  const [isOpen, setIsOpen] = useState(value);
+export const useSidebar = (): UseSidebar => {
+  const { sidebarOpen } = useGetAppLayoutState();
+  const setSidebarOpen = useSetAppSidebarOpen();
+  const toggle = useToggleAppSidebar();
 
-  useEffect(() => {
-    // Allows to externally control the sidebar.
-    setIsOpen(value);
-  }, [value]);
-
-  const actions: Actions = {
-    toggle: () => setIsOpen(!isOpen),
-    open: () => setIsOpen(true),
-    close: () => setIsOpen(false),
+  return {
+    isOpen: sidebarOpen,
+    toggle,
+    open: () => setSidebarOpen(true),
+    close: () => setSidebarOpen(false),
   };
-
-  return [isOpen, actions];
 };

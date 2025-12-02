@@ -44,12 +44,12 @@ const meta: Meta<typeof LayoutWrapper> = {
 export default meta;
 
 export const Default = () => {
-  const [isOpen, sidebarActions] = useSidebar();
+  const sidebar = useSidebar();
 
   return (
     <LayoutWrapper>
-      <Header onClickMenuOpener={sidebarActions.toggle} />
-      <Sidebar isOpen={isOpen} />
+      <Header onClickMenuOpener={sidebar.toggle} />
+      <Sidebar />
       <Main>
         <ErrorPageBoundary>
           <Content />
@@ -61,14 +61,14 @@ export const Default = () => {
 };
 
 export const ShowingAreas = () => {
-  const [isOpen, sidebarActions] = useSidebar();
+  const sidebar = useSidebar();
 
   return (
     <LayoutWrapper>
-      <Header onClickMenuOpener={sidebarActions.toggle}>
+      <Header onClickMenuOpener={sidebar.toggle}>
         <SbMockFiller>Header Area</SbMockFiller>
       </Header>
-      <Sidebar isOpen={isOpen}>
+      <Sidebar>
         <SbMockFiller>Sidebar Area</SbMockFiller>
       </Sidebar>
       <Main>
@@ -87,28 +87,28 @@ export const ShowingAreas = () => {
 };
 
 export const Loading = () => {
-  const [isOpen, sidebarActions] = useSidebar();
+  const sidebar = useSidebar();
 
   return (
     <LayoutWrapper>
-      <Header onClickMenuOpener={sidebarActions.toggle} />
-      <Sidebar isOpen={isOpen} />
+      <Header onClickMenuOpener={sidebar.toggle} />
+      <Sidebar />
       <Main loading>Page content...</Main>
     </LayoutWrapper>
   );
 };
 
 export const WithContent = () => {
-  const [isOpen, sidebarActions] = useSidebar();
+  const sidebar = useSidebar();
 
   return (
     <LayoutWrapper>
-      <Header onClickMenuOpener={sidebarActions.toggle} title='App title'>
+      <Header onClickMenuOpener={sidebar.toggle} title='App title'>
         <LanguageSelector />
         <ThemeSelector />
         <AccountManager onLogout={fn()} userName='John Doe' />
       </Header>
-      <Sidebar isOpen={isOpen} appVersion='1.2.3'>
+      <Sidebar appVersion='1.2.3'>
         <Sidebar.Menu>
           <Sidebar.MenuItem label='Assignment' icon={<AssignmentIcon />} />
           <Sidebar.MenuItem
@@ -135,15 +135,15 @@ export const WithContent = () => {
 };
 
 export const WithError = () => {
-  const [isOpen, sidebarActions] = useSidebar();
+  const sidebar = useSidebar();
   const throwError = () => {
     throw new Error('Test error');
   };
 
   return (
     <LayoutWrapper>
-      <Header onClickMenuOpener={sidebarActions.toggle} />
-      <Sidebar isOpen={isOpen} />
+      <Header onClickMenuOpener={sidebar.toggle} />
+      <Sidebar />
       <Main>
         <ErrorPageBoundary>
           <Content

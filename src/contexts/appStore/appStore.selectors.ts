@@ -10,6 +10,12 @@ export const useGetAppLang = (): AppLanguages =>
 export const useGetAppTheme = (): AppThemeNames =>
   useAppStore(useShallow(state => state.theme));
 
+export type AppLayoutState = {
+  sidebarOpen: boolean;
+};
+export const useGetAppLayoutState = (): AppLayoutState =>
+  useAppStore(useShallow(state => ({ sidebarOpen: state.sidebarOpen })));
+
 export const useGetAppLoading = (): boolean =>
   useAppStore(useShallow(state => state.loading));
 

@@ -20,6 +20,23 @@ export const useSetAppTheme = (): SetAppTheme => {
   };
 };
 
+type SetAppSidebarOpen = (newState: boolean) => void;
+export const useSetAppSidebarOpen = (): SetAppSidebarOpen => {
+  const { setState } = useAppStore;
+
+  return (newState: boolean) => {
+    setState({ sidebarOpen: newState });
+  };
+};
+export const useToggleAppSidebar = (): VoidFunction => {
+  const { setState, getState } = useAppStore;
+  const currentState = getState()?.sidebarOpen ?? true;
+
+  return () => {
+    setState({ sidebarOpen: !currentState });
+  };
+};
+
 type SetAppLoader = (newValue: boolean, message?: string) => void;
 const useSetAppLoader = (): SetAppLoader => {
   const { setState } = useAppStore;

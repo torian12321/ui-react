@@ -12,22 +12,25 @@ export const useAppStore = create<AppState>()(
       set => ({
         lang: DEFAULT_LANGUAGE,
         theme: DEFAULT_THEME,
+        sidebarOpen: true,
         loading: false,
         loadingMessage: '',
 
         setLang: (newLang: AppLanguages) => set({ lang: newLang }),
         setTheme: (newTheme: AppThemeNames) => set({ theme: newTheme }),
+        setSidebarOpen: (newState: boolean) => set({ sidebarOpen: newState }),
+
         setLoading: (val: boolean, message: string = '') =>
           set({ loading: val, loadingMessage: message }),
       }),
       {
-        // Persist on LocalStorage `lang` and `theme` values
+        // Persist on LocalStorage `lang`, `theme` and `sidebarOpen` values
         name: 'app-storage',
         storage: createJSONStorage(() => localStorage),
         partialize: state =>
           Object.fromEntries(
             Object.entries(state).filter(([key]) =>
-              ['lang', 'theme'].includes(key),
+              ['lang', 'theme', 'sidebarOpen'].includes(key),
             ),
           ),
       },

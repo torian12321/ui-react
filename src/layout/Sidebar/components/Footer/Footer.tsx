@@ -2,20 +2,20 @@ import type { JSX } from 'react';
 import MuiBox from '@mui/material/Box';
 
 import { Tooltip } from 'src/components';
+import { useGetAppLayoutState } from 'src/contexts/appStore';
 
-import { useSideBarContext } from '../../SideBarContext';
 import { footerStyles } from './SidebarFooter.styles';
 import { SidebarFooterProps } from './SidebarFooter.types';
 
 export const SidebarFooter = ({
   appVersion,
 }: SidebarFooterProps): JSX.Element | null => {
-  const { isOpen } = useSideBarContext();
+  const { sidebarOpen } = useGetAppLayoutState();
   const versionText = `Version: ${appVersion}`;
-  const versionLabel = isOpen ? versionText : 'V';
+  const versionLabel = sidebarOpen ? versionText : 'V';
 
   // Show tooltip only if the sidebar is closed
-  const tooltipTitle = !isOpen ? versionText : undefined;
+  const tooltipTitle = !sidebarOpen ? versionText : undefined;
 
   if (!appVersion) {
     return null;

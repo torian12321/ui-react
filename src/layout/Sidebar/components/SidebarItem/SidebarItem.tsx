@@ -3,8 +3,8 @@ import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
 
 import { Tooltip } from 'src/components';
+import { useGetAppLayoutState } from 'src/contexts/appStore';
 
-import { useSideBarContext } from '../../SideBarContext';
 import { MenuItem, MenuItemLogo } from './SidebarItem.styles';
 import { SidebarItemProps } from './SidebarItem.types';
 
@@ -14,9 +14,9 @@ export const SidebarItem = ({
   isActive = false,
   onClick,
 }: SidebarItemProps): JSX.Element => {
-  const { isOpen } = useSideBarContext();
+  const { sidebarOpen } = useGetAppLayoutState();
   // Show tooltip only if the sidebar is closed
-  const tooltipTitle = !isOpen ? label : undefined;
+  const tooltipTitle = !sidebarOpen ? label : undefined;
 
   return (
     <Tooltip title={tooltipTitle} placement='right'>
