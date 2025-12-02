@@ -9,6 +9,7 @@ import { BUTTON_SIZES } from './Button.types';
 const meta: Meta<typeof Button> = {
   title: 'Components/Button',
   component: Button,
+  tags: ['autodocs'],
   parameters: {
     layout: 'centered',
     docs: {
@@ -17,7 +18,6 @@ const meta: Meta<typeof Button> = {
       },
     },
   },
-  tags: ['autodocs'],
   args: { children: 'Button', onClick: fn() },
 };
 

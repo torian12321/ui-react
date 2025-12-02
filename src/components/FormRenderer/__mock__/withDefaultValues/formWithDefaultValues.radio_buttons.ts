@@ -1,4 +1,4 @@
-import { RB_UNSELECTED } from '../../FormRenderer.constants';
+import { RB_UNSELECTED } from '../../constants';
 import type { FormSchema } from '../../FormRenderer.types';
 import { mockOptions } from '../mockFormUtils';
 

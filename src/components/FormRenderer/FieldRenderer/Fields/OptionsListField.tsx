@@ -2,7 +2,8 @@ import { ChangeEvent } from 'react';
 import MuiCheckbox from '@mui/material/Checkbox';
 import MuiFormControlLabel from '@mui/material/FormControlLabel';
 
-import { FIELD_TYPE } from '../../FormRenderer.constants';
+import { FIELD_TYPE } from 'src/components/FormRenderer/constants';
+
 import type { Choice, ChoiceValue, FieldProps } from './Fields.types';
 import { getFieldChoices } from './Fields.utils';
 

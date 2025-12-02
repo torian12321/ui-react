@@ -3,7 +3,7 @@
 `<FormRenderer />` is a component that will automatically render a collection of form fields based on its `fields` prop
 
 ```jsx
-import FormRenderer from './FormRenderer';
+import { FormRenderer } from '@torian12321/ui-react/formRenderer';
 
 const SomeForm = () => (
   <FormRenderer
@@ -43,7 +43,7 @@ The set of choices can be provided directly on Field properties
 This option is recommended when choices are a short list and values are always the same.
 
 ```jsx
-import FormRenderer from './FormRenderer';
+import { FormRenderer } from '@torian12321/ui-react/formRenderer';
 
 const SomeFormWithChoices = () => (
   <FormRenderer
@@ -67,7 +67,7 @@ However, sometimes the list of choices is already on the view (like all users li
 For those cases, it is recommended to use `choicesCollection` prop.
 
 ```jsx
-import FormRenderer from './FormRenderer';
+import { FormRenderer } from '@torian12321/ui-react/formRenderer';
 
 const SomeFormWithChoices = () => (
   <FormRenderer
@@ -101,7 +101,8 @@ To trigger submit, reset or clear actions there are 2 ways:
 Use the same `id` value on the form than the one used on prop `form` for Button components
 
 ```jsx
-import { FormRenderer, Button } from '@torian12321/ui';
+import { Button } from '@torian12321/ui-react/components';
+import { FormRenderer } from '@torian12321/ui-react/formRenderer';
 
 const SomeForm = () => (
   <>
@@ -119,7 +120,7 @@ const SomeForm = () => (
 ### With `useFormRef`
 
 ```jsx
-import { FormRenderer, useFormRef } from '@torian12321/ui';
+import { FormRenderer } from '@torian12321/ui-react/formRenderer';
 
 const SomeForm = () => {
   const formRef = useFormRef();
@@ -162,4 +163,3 @@ These props, sorted from lower to higher [specificity](https://www.w3schools.com
 ## TODO
 
 - Add unit testing
-- Attachment field: Check functionallity

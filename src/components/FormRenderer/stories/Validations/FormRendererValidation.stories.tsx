@@ -1,14 +1,14 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
+import { formWithCustomMessageValidations } from 'formRenderer/__mock__/withValidations/formWithValidations.customMessages';
+import { formWithMultipleValidations } from 'formRenderer/__mock__/withValidations/formWithValidations.multiple';
+import { FormRenderer } from 'formRenderer/FormRenderer';
+import type { FormRendererProps } from 'formRenderer/FormRenderer.types';
 
-import { FormRenderer } from '../../';
 import { formWithRequiredValidations } from '../../__mock__/withValidations/formWithValidations';
-import { formWithCustomMessageValidations } from '../../__mock__/withValidations/formWithValidations.customMessages';
-import { formWithMultipleValidations } from '../../__mock__/withValidations/formWithValidations.multiple';
-import type { FormRendererProps } from '../../FormRenderer.types';
 import { StoryDecorator } from '../StoryDecorator';
 
 const meta: Meta<FormRendererProps> = {
-  title: 'components/FormRenderer/Validations',
+  title: 'FormRenderer/Validations',
   component: FormRenderer,
   decorators: [StoryDecorator],
   args: {

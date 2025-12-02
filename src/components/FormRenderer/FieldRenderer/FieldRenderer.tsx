@@ -1,15 +1,16 @@
 import type { JSX } from 'react';
 import { useMemo } from 'react';
-
 import {
   useGetFieldData,
   useSetValue,
   useTouchField,
-} from '../contexts/FormDataContext';
-import { useGetFieldStyles } from '../contexts/FormStylesContext';
-import type { FieldType } from '../FormRenderer.constants';
-import { FIELD_TYPE } from '../FormRenderer.constants';
-import { FieldValue } from '../FormRenderer.types';
+} from 'formRenderer/contexts/FormDataContext';
+import { useGetFieldStyles } from 'formRenderer/contexts/FormStylesContext';
+import type { FieldValue } from 'formRenderer/FormRenderer.types';
+
+import type { FieldType } from 'src/components/FormRenderer/constants';
+import { FIELD_TYPE } from 'src/components/FormRenderer/constants';
+
 import { FieldReadOnly } from './FieldReadOnly';
 import type { FieldRendererProps } from './FieldRenderer.types';
 import { isFieldWithLabel, isInfoField } from './FieldRenderer.utils';

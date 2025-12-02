@@ -1,6 +1,7 @@
 import MuiTypography from '@mui/material/Typography';
 
-import { FIELD_TYPE } from '../../FormRenderer.constants';
+import { FIELD_TYPE } from 'src/components/FormRenderer/constants';
+
 import { labelFieldStyles } from './Fields.styles';
 import { FieldProps } from './Fields.types';
 import { getCustomLabel } from './Fields.utils';

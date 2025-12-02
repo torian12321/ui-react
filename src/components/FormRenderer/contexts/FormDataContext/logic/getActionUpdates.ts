@@ -1,6 +1,6 @@
+import { LOGIC_ACTIONS } from '../../../constants';
 import type { ChoiceValue } from '../../../FieldRenderer';
 import { isFieldWithOptions } from '../../../FieldRenderer/FieldRenderer.utils';
-import { LOGIC_ACTIONS } from '../../../FormRenderer.constants';
 import type { ActionDetails } from '../../../FormRenderer.types';
 import { FieldWithValue } from '../types';
 

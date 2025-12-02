@@ -2,7 +2,7 @@ import { useMemo } from 'react';
 
 import type { MuiStyles } from '../../../../types';
 import { useCombineSxStyles } from '../../../../utils/useCombineSxStyles';
-import { FieldType } from '../../FormRenderer.constants';
+import { FieldType } from '../../constants';
 import { useGetFields } from '../FormDataContext';
 import { useFormStylesContext } from './FormStylesContext';
 

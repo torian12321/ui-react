@@ -1,15 +1,15 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
+import { formWithLogic } from 'formRenderer/__mock__/withLogic/formWithLogic.base';
+import { formLogicConditionalTypes } from 'formRenderer/__mock__/withLogic/formWithLogic.conditionalType';
+import { formWithLogicContains } from 'formRenderer/__mock__/withLogic/formWithLogic.contains';
+import { formExcludeChoices } from 'formRenderer/__mock__/withLogic/formWithLogic.excludeChoices';
+import { FormRenderer } from 'formRenderer/FormRenderer';
+import type { FormRendererProps } from 'formRenderer/FormRenderer.types';
 
-import { FormRenderer } from '../../';
-import { formWithLogic } from '../../__mock__/withLogic/formWithLogic.base';
-import { formLogicConditionalTypes } from '../../__mock__/withLogic/formWithLogic.conditionalType';
-import { formWithLogicContains } from '../../__mock__/withLogic/formWithLogic.contains';
-import { formExcludeChoices } from '../../__mock__/withLogic/formWithLogic.excludeChoices';
-import type { FormRendererProps } from '../../FormRenderer.types';
 import { StoryDecorator } from '../StoryDecorator';
 
 const meta: Meta<FormRendererProps> = {
-  title: 'components/FormRenderer/Logic',
+  title: 'FormRenderer/Logic',
   component: FormRenderer,
   decorators: [StoryDecorator],
   args: {

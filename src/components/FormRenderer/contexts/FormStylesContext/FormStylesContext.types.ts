@@ -1,5 +1,5 @@
 import type { MuiStyles } from '../../../../types';
-import type { FieldType } from '../../FormRenderer.constants';
+import type { FieldType } from '../../constants';
 
 export type SxFieldsByType = { [key in FieldType]?: MuiStyles | MuiStyles[] };
 export type SxFieldsByName<FieldNames extends string = string> = {

@@ -1,6 +1,8 @@
 import type { SetStateAction } from 'react';
-
-import type { FieldValue, FormRendererProps } from '../../FormRenderer.types';
+import type {
+  FieldValue,
+  FormRendererProps,
+} from 'formRenderer/FormRenderer.types';
 
 export type FormExampleProps = FormRendererProps & {
   onUpdateValues?: SetStateAction<FieldValue>;

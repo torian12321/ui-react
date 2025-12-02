@@ -2,8 +2,8 @@ import type { JSX } from 'react';
 
 import type { TransferListItem, TransferListItemValue } from 'src/components';
 import { TransferList } from 'src/components';
+import { FIELD_TYPE } from 'src/components/FormRenderer/constants';
 
-import { FIELD_TYPE } from '../../FormRenderer.constants';
 import type { ChoiceValue, FieldProps } from './Fields.types';
 import { getFieldChoices } from './Fields.utils';
 

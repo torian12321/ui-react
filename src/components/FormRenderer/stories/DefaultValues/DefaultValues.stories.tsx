@@ -1,15 +1,15 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
+import { formWithDefaultValues } from 'formRenderer/__mock__/withDefaultValues/formWithDefaultValues';
+import { formWithDefaultValuesDates } from 'formRenderer/__mock__/withDefaultValues/formWithDefaultValues.dates';
+import { formWithDefaultValuesDateTime } from 'formRenderer/__mock__/withDefaultValues/formWithDefaultValues.datetime';
+import { formWithDefaultValuesRadioButtons } from 'formRenderer/__mock__/withDefaultValues/formWithDefaultValues.radio_buttons';
+import { FormRenderer } from 'formRenderer/FormRenderer';
+import type { FormRendererProps } from 'formRenderer/FormRenderer.types';
 
-import { FormRenderer } from '../../';
-import { formWithDefaultValues } from '../../__mock__/withDefaultValues/formWithDefaultValues';
-import { formWithDefaultValuesDates } from '../../__mock__/withDefaultValues/formWithDefaultValues.dates';
-import { formWithDefaultValuesDateTime } from '../../__mock__/withDefaultValues/formWithDefaultValues.datetime';
-import { formWithDefaultValuesRadioButtons } from '../../__mock__/withDefaultValues/formWithDefaultValues.radio_buttons';
-import type { FormRendererProps } from '../../FormRenderer.types';
 import { StoryDecorator } from '../StoryDecorator';
 
 const meta: Meta<FormRendererProps> = {
-  title: 'components/FormRenderer/DefaultValues',
+  title: 'FormRenderer/DefaultValues',
   component: FormRenderer,
   decorators: [StoryDecorator],
   args: {

@@ -1,15 +1,15 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
+import { formWithDateValidations } from 'formRenderer/__mock__/withValidations/formWithValidations.dates';
+import { formWithInfoMessageValidations } from 'formRenderer/__mock__/withValidations/formWithValidations.infoMessages';
+import { formWithNumericalValidations } from 'formRenderer/__mock__/withValidations/formWithValidations.numbers';
+import { formWithTextValidations } from 'formRenderer/__mock__/withValidations/formWithValidations.text';
+import { FormRenderer } from 'formRenderer/FormRenderer';
+import type { FormRendererProps } from 'formRenderer/FormRenderer.types';
 
-import { FormRenderer } from '../..';
-import { formWithDateValidations } from '../../__mock__/withValidations/formWithValidations.dates';
-import { formWithInfoMessageValidations } from '../../__mock__/withValidations/formWithValidations.infoMessages';
-import { formWithNumericalValidations } from '../../__mock__/withValidations/formWithValidations.numbers';
-import { formWithTextValidations } from '../../__mock__/withValidations/formWithValidations.text';
-import type { FormRendererProps } from '../../FormRenderer.types';
 import { StoryDecorator } from '../StoryDecorator';
 
 const meta: Meta<FormRendererProps> = {
-  title: 'components/FormRenderer/Validations/Type Specific',
+  title: 'FormRenderer/Validations/Type Specific',
   component: FormRenderer,
   decorators: [StoryDecorator],
   args: {

@@ -1,4 +1,4 @@
-import { FIELD_TYPE } from '../../FormRenderer.constants';
+import { FIELD_TYPE } from 'src/components/FormRenderer/constants';
 
 export type FieldProps<
   FieldNames extends string = string,

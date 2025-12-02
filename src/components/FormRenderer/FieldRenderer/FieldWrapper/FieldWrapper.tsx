@@ -1,8 +1,8 @@
 import type { JSX, PropsWithChildren } from 'react';
 import MuiBox from '@mui/material/Box';
+import { useGetFieldData } from 'formRenderer/contexts/FormDataContext';
+import { useGetFieldStyles } from 'formRenderer/contexts/FormStylesContext';
 
-import { useGetFieldData } from '../../contexts/FormDataContext';
-import { useGetFieldStyles } from '../../contexts/FormStylesContext';
 import { FieldBox, FieldContainer, Wrapper } from './FieldWrapper.styles';
 import type { FieldWrapperProps } from './FieldWrapper.types';
 import { HelperText } from './FieldWrapperHelperText';

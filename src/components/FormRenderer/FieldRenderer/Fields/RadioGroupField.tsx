@@ -3,7 +3,8 @@ import MuiFormControlLabel from '@mui/material/FormControlLabel';
 import MuiRadio from '@mui/material/Radio';
 import MuiRadioGroup from '@mui/material/RadioGroup';
 
-import { FIELD_TYPE } from '../../FormRenderer.constants';
+import { FIELD_TYPE } from 'src/components/FormRenderer/constants';
+
 import { radioButtonItemStyle } from './Fields.styles';
 import type { FieldProps } from './Fields.types';
 import { getFieldChoices } from './Fields.utils';

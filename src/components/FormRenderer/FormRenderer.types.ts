@@ -9,6 +9,13 @@ import type {
   TextValidations,
 } from './contexts/FormDataContext/reducer/validateField/validateField.types';
 import type { FormStylesContextProps } from './contexts/FormStylesContext';
+import {
+  FIELD_TYPE,
+  LOGIC_ACTIONS,
+  LOGIC_TYPES,
+  LogicAction,
+  LogicType,
+} from './constants';
 import type {
   ChoicesCollection,
   ChoiceValue,
@@ -16,13 +23,6 @@ import type {
   Message,
   Properties,
 } from './FieldRenderer';
-import {
-  FIELD_TYPE,
-  LOGIC_ACTIONS,
-  LOGIC_TYPES,
-  LogicAction,
-  LogicType,
-} from './FormRenderer.constants';
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export type FieldValue = any;
@@ -34,7 +34,7 @@ export type FormRendererProps<
   FieldNames extends string = string,
   ChoicesRef extends string = string,
 > = FormStylesContextProps & {
-  id: string;
+  id?: string;
   fields: Field<FieldNames, ChoicesRef>[];
   logic?: FormLogic<FieldNames>[];
   disabled?: boolean;

@@ -1,5 +1,9 @@
 import { useState } from 'react';
 import type { Decorator, StoryContext } from '@storybook/react-vite';
+import type {
+  FieldValue,
+  FormRendererProps,
+} from 'formRenderer/FormRenderer.types';
 import { action } from 'storybook/actions';
 
 import { Tabs } from 'src/components';
@@ -8,7 +12,6 @@ import type {
   OnSubmitArgs,
 } from 'src/components/FormRenderer/contexts/FormDataContext';
 
-import type { FieldValue, FormRendererProps } from '../../FormRenderer.types';
 import { DEFAULT_FORM_ID, TABS } from './constants';
 import { CodeExample } from './StoryDecorator.CodeExample';
 import { SubmitButton } from './StoryDecorator.SubmitButton';

@@ -1,7 +1,8 @@
 import type { JSX } from 'react';
 import MuiAlert from '@mui/material/Alert';
 
-import { FIELD_TYPE } from '../../FormRenderer.constants';
+import { FIELD_TYPE } from 'src/components/FormRenderer/constants';
+
 import { InfoMessageBody, InfoMessageTitle } from './Fields.styles';
 import type { FieldProps } from './Fields.types';
 

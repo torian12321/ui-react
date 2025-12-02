@@ -1,7 +1,8 @@
 import type { ChangeEvent, JSX } from 'react';
 import MuiCheckbox from '@mui/material/Checkbox';
 
-import { FIELD_TYPE } from '../../FormRenderer.constants';
+import { FIELD_TYPE } from 'src/components/FormRenderer/constants';
+
 import type { FieldProps } from './Fields.types';
 
 export const BooleanField = ({

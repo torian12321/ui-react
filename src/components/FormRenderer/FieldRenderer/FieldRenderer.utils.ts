@@ -3,7 +3,7 @@ import {
   FIELDS_WITHOUT_INNER_LABEL,
   type FieldType,
   INFO_FIELDS,
-} from '../FormRenderer.constants';
+} from 'src/components/FormRenderer/constants';
 
 export const isInfoField = (type: FieldType): boolean =>
   INFO_FIELDS.includes(type);

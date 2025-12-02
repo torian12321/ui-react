@@ -5,7 +5,7 @@
  * @returns The import documentation
  */
 export const docImport = (
-  packageName: 'components' | 'views' | 'layout' | 'contexts',
+  packageName: 'components' | 'formRenderer' | 'views' | 'layout' | 'contexts',
   componentName: string,
 ): string =>
   `\`\`\`typescript\nimport { ${componentName} } from '@torian12321/ui-react/${packageName}';\`\`\``;

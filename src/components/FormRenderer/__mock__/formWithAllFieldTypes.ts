@@ -1,4 +1,4 @@
-import { FIELD_TYPE, FIELDS_WITH_OPTIONS } from '../FormRenderer.constants';
+import { FIELD_TYPE, FIELDS_WITH_OPTIONS } from '../constants';
 import type { Field, FormSchema } from '../FormRenderer.types';
 import { mockOptions } from './mockFormUtils';
 

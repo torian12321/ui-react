@@ -1,16 +1,19 @@
 import { useEffect, useState } from 'react';
 import type { Meta, StoryObj } from '@storybook/react-vite';
+import {
+  mockOptions,
+  mockOptionsTwo,
+} from 'formRenderer/__mock__/mockFormUtils';
+import { formWithChoices } from 'formRenderer/__mock__/withChocies/formWithChocies.base';
+import { FormRenderer } from 'formRenderer/FormRenderer';
+import type { FormRendererProps } from 'formRenderer/FormRenderer.types';
 
 import { Button } from 'src/components';
 
-import { FormRenderer } from '../..';
-import { mockOptions, mockOptionsTwo } from '../../__mock__/mockFormUtils';
-import { formWithChoices } from '../../__mock__/withChocies/formWithChocies.base';
-import type { FormRendererProps } from '../../FormRenderer.types';
 import { StoryDecorator } from '../StoryDecorator';
 
 const meta: Meta<FormRendererProps> = {
-  title: 'components/FormRenderer/Options',
+  title: 'FormRenderer/Options',
   component: FormRenderer,
   decorators: [StoryDecorator],
   args: {

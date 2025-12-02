@@ -1,11 +1,12 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
+import { formExampleCreateRequest } from 'formRenderer/__mock__/formExampleCreateRequest';
+import { formExampleWorkflow } from 'formRenderer/__mock__/formExampleWorkflow';
+import { formExampleWorkflowAttachment } from 'formRenderer/__mock__/formExampleWorkflowAttachment';
+import { FormRenderer } from 'formRenderer/FormRenderer';
+import type { FormRendererProps } from 'formRenderer/FormRenderer.types';
 
-import { FormRenderer } from '../..';
-import { formExampleCreateRequest } from '../../__mock__/formExampleCreateRequest';
-import { formExampleWorkflow } from '../../__mock__/formExampleWorkflow';
-import { formExampleWorkflowAttachment } from '../../__mock__/formExampleWorkflowAttachment';
-import { FIELD_TYPE } from '../../FormRenderer.constants';
-import type { FormRendererProps } from '../../FormRenderer.types';
+import { FIELD_TYPE } from 'src/components/FormRenderer/constants';
+
 import {
   stylesHalfRow,
   stylesInlined,
@@ -14,7 +15,7 @@ import {
 import { StoryDecorator } from '../StoryDecorator';
 
 const meta: Meta<FormRendererProps> = {
-  title: 'components/FormRenderer/Examples',
+  title: 'FormRenderer/Examples',
   component: FormRenderer,
   decorators: [StoryDecorator],
   args: {

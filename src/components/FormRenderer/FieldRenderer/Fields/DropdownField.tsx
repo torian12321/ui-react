@@ -3,7 +3,8 @@ import { useEffect, useState } from 'react';
 import MuiAutocomplete from '@mui/material/Autocomplete';
 import MuiCircularProgress from '@mui/material/CircularProgress';
 
-import { FIELD_TYPE } from '../../FormRenderer.constants';
+import { FIELD_TYPE } from 'src/components/FormRenderer/constants';
+
 import { DropdownListItem as Item } from './DropdownField.Item';
 import { loaderStyles } from './Fields.styles';
 import type { Choice, ChoiceValue, FieldProps } from './Fields.types';

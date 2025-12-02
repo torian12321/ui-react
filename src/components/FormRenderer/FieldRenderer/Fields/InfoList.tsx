@@ -4,7 +4,8 @@ import MuiAccordion from '@mui/material/Accordion';
 import MuiAccordionDetails from '@mui/material/AccordionDetails';
 import MuiCircularProgress from '@mui/material/CircularProgress';
 
-import { FIELD_TYPE } from '../../FormRenderer.constants';
+import { FIELD_TYPE } from 'src/components/FormRenderer/constants';
+
 import {
   InfoListHeader,
   InfoListHeaderTitle,

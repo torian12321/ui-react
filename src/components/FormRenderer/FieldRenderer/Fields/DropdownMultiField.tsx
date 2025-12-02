@@ -7,7 +7,8 @@ import MuiAutocomplete, {
 import Checkbox from '@mui/material/Checkbox';
 import MuiCircularProgress from '@mui/material/CircularProgress';
 
-import { FIELD_TYPE } from '../../FormRenderer.constants';
+import { FIELD_TYPE } from 'src/components/FormRenderer/constants';
+
 import { SharedTextField } from './SharedTextField/SharedTextField';
 import { loaderStyles } from './Fields.styles';
 import { Choice, ChoiceValue, FieldProps } from './Fields.types';

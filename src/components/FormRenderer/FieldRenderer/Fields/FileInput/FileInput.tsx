@@ -16,7 +16,7 @@ import { useTheme } from '@mui/material/styles';
 
 import { LoadingBar } from 'src/components';
 
-import { FIELD_TYPE } from '../../../FormRenderer.constants';
+import { FIELD_TYPE } from '../../../constants';
 import type { FieldProps, FileFieldProps } from '../Fields.types';
 import {
   fileInputStyles,

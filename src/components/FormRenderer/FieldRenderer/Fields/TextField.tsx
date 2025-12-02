@@ -1,6 +1,7 @@
 import type { JSX } from 'react';
 
-import { FIELD_TYPE } from '../../FormRenderer.constants';
+import { FIELD_TYPE } from 'src/components/FormRenderer/constants';
+
 import type { FieldProps } from './Fields.types';
 import { SharedTextField } from './SharedTextField';
 

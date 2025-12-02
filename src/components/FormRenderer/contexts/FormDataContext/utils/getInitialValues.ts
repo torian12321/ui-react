@@ -1,10 +1,6 @@
 import { getCurrentDate, getCurrentDateTime } from '@torian12321/js-utils';
 
-import {
-  EMPTY_FIELD_VALUES,
-  RB_UNSELECTED,
-  TODAY,
-} from '../../../FormRenderer.constants';
+import { EMPTY_FIELD_VALUES, RB_UNSELECTED, TODAY } from '../../../constants';
 import type { DefaultValues, Field } from '../../../FormRenderer.types';
 import type { FieldValues } from '../reducer';
 

@@ -1,3 +1,10 @@
+export type { FieldType } from './constants';
+export {
+  FIELD_TYPE,
+  LOGIC_ACTIONS,
+  LOGIC_TYPES,
+  RB_UNSELECTED,
+} from './constants';
 export type {
   FormValues,
   OnChangeArgs,
@@ -16,13 +23,6 @@ export type {
   CustomLabels,
 } from './FieldRenderer';
 export { FormRenderer } from './FormRenderer';
-export type { FieldType } from './FormRenderer.constants';
-export {
-  FIELD_TYPE,
-  LOGIC_ACTIONS,
-  LOGIC_TYPES,
-  RB_UNSELECTED,
-} from './FormRenderer.constants';
 export type {
   DefaultValues,
   Field,

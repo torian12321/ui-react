@@ -1,14 +1,24 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
+import { formWithAllFieldTypes } from 'formRenderer/__mock__/formWithAllFieldTypes';
+import { FormRenderer } from 'formRenderer/FormRenderer';
+import type { FormRendererProps } from 'formRenderer/FormRenderer.types';
 
-import { formWithAllFieldTypes } from '../__mock__/formWithAllFieldTypes';
-import type { FormRendererProps } from '../FormRenderer.types';
-import { FormRenderer } from '../';
+import { docImport } from 'src/utils/storybook';
+
 import { StoryDecorator } from './StoryDecorator';
 
 const meta: Meta<FormRendererProps> = {
-  title: 'components/FormRenderer',
+  title: 'FormRenderer',
   component: FormRenderer,
   decorators: [StoryDecorator],
+  tags: ['autodocs'],
+  parameters: {
+    docs: {
+      description: {
+        component: docImport('formRenderer', 'FormRenderer'),
+      },
+    },
+  },
   args: {
     id: 'form-renderer',
   },

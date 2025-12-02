@@ -8,7 +8,8 @@ import dayjs from 'dayjs';
 
 import { getDateFormat } from '@torian12321/js-utils/date';
 
-import { FIELD_TYPE } from '../../FormRenderer.constants';
+import { FIELD_TYPE } from 'src/components/FormRenderer/constants';
+
 import type { FieldProps } from './Fields.types';
 import { getSlotPropsTextField } from './Fields.utils';
 
