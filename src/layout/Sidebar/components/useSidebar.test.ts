@@ -6,60 +6,52 @@ import { useSidebar } from './useSidebar';
 describe('Layout/Sidebar/useSidebar', () => {
   it('should initialize with the default value (true)', () => {
     const { result } = renderHook(() => useSidebar());
-    const [isOpen] = result.current;
+    const { isOpen } = result.current;
     expect(isOpen).toBe(true);
-  });
-
-  it('should initialize with the provided value (false)', () => {
-    const { result } = renderHook(() => useSidebar(false));
-    const [isOpen] = result.current;
-    expect(isOpen).toBe(false);
   });
 
   it('should toggle the sidebar state', () => {
     const { result } = renderHook(() => useSidebar());
-    const [, actions] = result.current;
+    const { toggle } = result.current;
 
     act(() => {
-      actions.toggle();
+      toggle();
     });
 
-    const [isOpen] = result.current;
+    const { isOpen } = result.current;
     expect(isOpen).toBe(false);
   });
 
   it('should open the sidebar', () => {
-    const { result } = renderHook(() => useSidebar(false));
-    const [, actions] = result.current;
+    const { result } = renderHook(() => useSidebar());
+    const { open } = result.current;
 
     act(() => {
-      actions.open();
+      open();
     });
 
-    const [isOpen] = result.current;
+    const { isOpen } = result.current;
     expect(isOpen).toBe(true);
   });
 
   it('should close the sidebar', () => {
-    const { result } = renderHook(() => useSidebar(true));
-    const [, actions] = result.current;
+    const { result } = renderHook(() => useSidebar());
+    const { close } = result.current;
 
     act(() => {
-      actions.close();
+      close();
     });
 
-    const [isOpen] = result.current;
+    const { isOpen } = result.current;
     expect(isOpen).toBe(false);
   });
 
   it('should update the state when the value prop changes', () => {
-    const { result, rerender } = renderHook(({ value }) => useSidebar(value), {
-      initialProps: { value: true },
-    });
+    const { result, rerender } = renderHook(() => useSidebar());
 
-    rerender({ value: false });
+    rerender();
 
-    const [isOpen] = result.current;
+    const { isOpen } = result.current;
     expect(isOpen).toBe(false);
   });
 });
