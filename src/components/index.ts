@@ -3,6 +3,7 @@ export * from './Backdrop';
 export * from './Breadcrumbs';
 export * from './Button';
 export * from './ButtonCreateFilter';
+export * from './ButtonCustomizations';
 export * from './Chip';
 export * from './CompanyLogo';
 export * from './CopyButton';
