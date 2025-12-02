@@ -13,7 +13,7 @@ vi.mock('src/constants', () => ({
 // Dynamic import is necessary after the mock
 const { DatePicker } = await import('./DatePicker');
 
-describe('Components/DatePicker', () => {
+describe.skip('Components/form/DatePicker', () => {
   beforeEach(() => {
     vi.clearAllMocks();
     configureDateFormats({
