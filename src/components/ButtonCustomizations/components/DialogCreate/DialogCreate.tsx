@@ -105,7 +105,7 @@ export const DialogCreate = ({
           primary
           disabled={hasError}
           loading={loading}
-          startIcon={MuiIconAdd}
+          startIcon={<MuiIconAdd />}
           onClick={handleOnSubmit}
         >
           {l10n('components.buttonCustomizations.dialogCreate.buttonSave')}

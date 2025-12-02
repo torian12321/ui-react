@@ -1,4 +1,4 @@
-import type { SvgIconComponent } from '@mui/icons-material';
+import type { ReactNode } from 'react';
 
 import type { ComponentWithStyles, ComponentWithTestId } from 'src/types';
 
@@ -15,7 +15,7 @@ export type ButtonProps = ComponentWithTestId &
     disabled?: boolean;
     loading?: boolean;
     show?: boolean;
-    startIcon?: SvgIconComponent;
+    startIcon?: ReactNode;
     onClick?: VoidFunction;
   };
 
