@@ -27,3 +27,10 @@ export const useGetIsRwsTheme = (): boolean => {
 
   return RWS_THEMES.includes(themeName);
 };
+
+const BASE_360_THEMES: AppThemeNames[] = ['light', 'dark'];
+export const useGetIs360BaseTheme = (): boolean => {
+  const themeName = useGetAppTheme();
+
+  return BASE_360_THEMES.includes(themeName);
+};
