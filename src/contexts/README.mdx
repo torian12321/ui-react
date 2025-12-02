@@ -1,0 +1,33 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title='Contexts/Introduction' />
+
+# Provider
+
+To start using `@torian12321/ui-react` library, you must wrap your application with the Provider.
+
+#### Why?
+
+While a few components might work as standalone, others will need access to the application's global state.
+
+## Usage
+
+```jsx
+import { Provider, showMessageInfo } from '@torian12321/ui-react/context';
+
+const App = () => (
+  <Provider>
+    {/**
+      ...
+      your content here
+      ...
+    **/}
+  </Provider>
+);
+```
+
+## Providers
+
+- [SnackbarProvider](/docs/contexts-snackbarprovider-introduction--documentation)
+- AppState
+  - [AppLoader](/story/contexts-provider--app-loader)
