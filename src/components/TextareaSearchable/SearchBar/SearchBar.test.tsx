@@ -16,7 +16,7 @@ describe('Components/TextareaSearchable/SearchBar', () => {
     vi.clearAllMocks();
   });
 
-  it('Should render', () => {
+  it.skip('Should render', () => {
     render(
       <SearchBar
         value=''

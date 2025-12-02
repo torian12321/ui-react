@@ -24,4 +24,11 @@ export default {
   loadingBar: {
     defaultLabel: 'Loading...',
   },
+  buttonCreateFilter: {
+    button: 'Create new filter',
+    fieldLabel: 'Filter name',
+    infoMessages: {
+      invalidNameLengtMax: 'Filter name must be less than {{max}} characters',
+    },
+  },
 };
