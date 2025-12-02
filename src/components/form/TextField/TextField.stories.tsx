@@ -17,7 +17,7 @@ const StateDecorator: Decorator<TextFieldProps> = (
   Story,
   props: StoryContext<TextFieldProps>,
 ) => {
-  const [value, setValue] = useState(props?.args?.value || '');
+  const [value, setValue] = useState(props?.args?.value ?? '');
 
   const handleChange = (newValue: string) => {
     setValue(newValue);

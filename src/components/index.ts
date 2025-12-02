@@ -5,6 +5,7 @@ export * from './Button';
 export * from './Chip';
 export * from './CompanyLogo';
 export * from './CopyButton';
+export * from './Dialogs';
 export * from './DocumentDisplay';
 export * from './form/Dropdown';
 export * from './form/InputMultiple';
