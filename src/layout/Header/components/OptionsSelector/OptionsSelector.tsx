@@ -1,10 +1,8 @@
 import type { JSX, MouseEvent, PropsWithChildren } from 'react';
 import { useState } from 'react';
-import {
-  Button,
-  Menu as MuiMenu,
-  MenuItem as MuiMenuItem,
-} from '@mui/material';
+import MuiButton from '@mui/material/Button';
+import MuiMenu from '@mui/material/Menu';
+import MuiMenuItem from '@mui/material/MenuItem';
 
 import { Tooltip } from 'src/components';
 
@@ -22,6 +20,7 @@ export const OptionsSelector = <T,>({
   label = '',
   show = true,
   options = [],
+  value,
   onChange = () => {},
 }: PropsWithChildren<OptionsSelectorProps<T>>): JSX.Element | null => {
   /**
@@ -48,7 +47,7 @@ export const OptionsSelector = <T,>({
   return (
     <>
       <Tooltip title={label}>
-        <Button
+        <MuiButton
           id={dataTestid}
           data-testid={dataTestid}
           aria-label={label}
@@ -56,7 +55,7 @@ export const OptionsSelector = <T,>({
           sx={btnStyles}
         >
           {children}
-        </Button>
+        </MuiButton>
       </Tooltip>
       {open && (
         <MuiMenu
@@ -64,13 +63,16 @@ export const OptionsSelector = <T,>({
           anchorEl={anchorEl}
           open={open}
           onClose={handleClose}
-          MenuListProps={{
-            'aria-labelledby': dataTestid,
+          slotProps={{
+            list: {
+              'aria-labelledby': dataTestid,
+            },
           }}
         >
           {options.map(op => (
             <MuiMenuItem
               key={op.value?.toString()}
+              selected={op.value === value}
               onClick={() => handleClickOption(op.value)}
             >
               {op.label}

@@ -1,7 +1,7 @@
 import type { JSX } from 'react';
 import LanguageSharpIcon from '@mui/icons-material/LanguageSharp';
 
-import { useSetAppLang } from 'src/contexts';
+import { useGetAppLang, useSetAppLang } from 'src/contexts';
 import { useLocalization } from 'src/localization';
 import type { AppLanguages } from 'src/types';
 
@@ -20,6 +20,7 @@ export const LanguageSelector = ({
   const dropdownOptions = useGetLanguageOptions(options);
 
   const setLanguage = useSetAppLang();
+  const value = useGetAppLang();
 
   const handleOnChange = (val: AppLanguages) => {
     setLanguage(val);
@@ -33,6 +34,7 @@ export const LanguageSelector = ({
       label={l10n('layout.languageSelector.ariaLabel')}
       show={show}
       options={dropdownOptions}
+      value={value}
       onChange={handleOnChange}
     >
       {showIcon && <LanguageSharpIcon />}

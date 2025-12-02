@@ -1,7 +1,7 @@
 import type { JSX } from 'react';
 import ContrastIcon from '@mui/icons-material/Contrast';
 
-import { useSetAppTheme } from 'src/contexts';
+import { useGetAppTheme, useSetAppTheme } from 'src/contexts';
 import { useLocalization } from 'src/localization';
 import type { AppThemeNames } from 'src/types';
 
@@ -20,6 +20,7 @@ export const ThemeSelector = ({
   const dropdownOptions = useGetThemeOptions(options);
 
   const setTheme = useSetAppTheme();
+  const value = useGetAppTheme();
 
   const handleOnChange = (val: AppThemeNames) => {
     setTheme(val);
@@ -32,6 +33,7 @@ export const ThemeSelector = ({
       menuId='theme-menu'
       label={l10n('layout.themeSelector.ariaLabel')}
       show={show}
+      value={value}
       options={dropdownOptions}
       onChange={handleOnChange}
     >
