@@ -8,6 +8,7 @@ export * from './CompanyLogo';
 export * from './CopyButton';
 export * from './Dialogs';
 export * from './DocumentDisplay';
+export * from './form/DatePicker';
 export * from './form/Dropdown';
 export * from './form/InputMultiple';
 export * from './form/Switch';

@@ -18,6 +18,12 @@ export default {
       clear: 'Clear',
     },
   },
+  datePicker: {
+    errorMessages: {
+      invalidDate: 'Invalid date',
+      isRequired: '{{label}} is required',
+    },
+  },
   iconButtonGroup: {
     moreOptions: 'More options',
   },

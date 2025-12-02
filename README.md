@@ -58,4 +58,5 @@ const MyComplexComponent = (
 ## TODO:
 
 - Extend documentation.
+- Remove use of `styled` and use `xs` prop instead
 - Consider to use [react-popper](https://popper.js.org/react-popper/) to replace MUITooltips.
