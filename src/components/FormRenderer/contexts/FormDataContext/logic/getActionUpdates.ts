@@ -1,7 +1,8 @@
-import { LOGIC_ACTIONS } from '../../../constants';
-import type { ChoiceValue } from '../../../FieldRenderer';
-import { isFieldWithOptions } from '../../../FieldRenderer/FieldRenderer.utils';
-import type { ActionDetails } from '../../../FormRenderer.types';
+import { LOGIC_ACTIONS } from 'formRenderer/constants';
+import type { ChoiceValue } from 'formRenderer/FieldRenderer';
+import { isFieldWithOptions } from 'formRenderer/FieldRenderer/FieldRenderer.utils';
+import type { ActionDetails } from 'formRenderer/FormRenderer.types';
+
 import { FieldWithValue } from '../types';
 
 export const getActionUpdates = (

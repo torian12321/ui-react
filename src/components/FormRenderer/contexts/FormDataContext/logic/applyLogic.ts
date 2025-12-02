@@ -1,6 +1,7 @@
+import type { Field, FormLogic } from 'formRenderer/FormRenderer.types';
+
 import { isString, mergeDeep } from '@torian12321/js-utils';
 
-import type { Field, FormLogic } from '../../../FormRenderer.types';
 import type { FieldValues } from '../reducer';
 import type { FieldWithValue, FormFields } from '../types';
 import { checkIfConditionPass, fieldExist } from './checkIfConditionPass';
@@ -42,14 +43,6 @@ export const applyFieldLogic = (
       });
     });
   });
-
-  // TODO: Review if this is needed
-  // Object.keys(newFields).forEach(fieldName => {
-  //   const field = newFields[fieldName];
-  //   if (field.type === FIELD_TYPE.DROPDOWN && field?.multi) {
-  //     newFields[fieldName].value = getChoiceValues(field?.value);
-  //   }
-  // });
 
   return Object.values(newFields);
 };

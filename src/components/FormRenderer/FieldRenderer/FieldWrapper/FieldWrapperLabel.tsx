@@ -1,3 +1,4 @@
+import type { JSX } from 'react';
 import InfoIcon from '@mui/icons-material/Info';
 
 import { Tooltip } from 'src/components';
@@ -15,7 +16,7 @@ export const FieldLabel = ({
   name = '',
   infoMessage,
   required = false,
-}: LabelProps) => (
+}: LabelProps): JSX.Element => (
   <Label htmlFor={name}>
     <LabelText>
       {label}

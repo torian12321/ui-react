@@ -16,5 +16,10 @@ export default {
     search: 'Buscar',
     clear: 'Limpiar',
     sync: 'Sincronizar',
+    add: 'Añadir',
+    remove: 'Eliminar',
+    addAll: 'Añadir Todo',
+    removeAll: 'Eliminar Todo',
+    filter: 'Filtrar',
   },
 } satisfies DeepPartial<typeof locCommon>;

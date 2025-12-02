@@ -54,13 +54,13 @@ export const DateField = ({
           actionBar: {
             actions: actionBarButtons,
           },
-          textField: (params: TextFieldProps) => ({
-            ...getSlotPropsTextField(params),
+          textField: {
+            ...getSlotPropsTextField({} as TextFieldProps),
             error,
             name,
             id: name,
             onBlur,
-          }),
+          },
         }}
       />
     </MuiLocalizationProvider>

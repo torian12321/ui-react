@@ -1,10 +1,11 @@
-import { isNumber, isString } from '@torian12321/js-utils/typeChecker';
-
 import type {
   ConditionLogical,
   Field,
   FormLogicCondition,
-} from '../../../FormRenderer.types';
+} from 'formRenderer/FormRenderer.types';
+
+import { isNumber, isString } from '@torian12321/js-utils/typeChecker';
+
 import { FieldValues } from '../reducer';
 
 export const fieldExist = (formFields: Field[], fieldName: string): boolean =>

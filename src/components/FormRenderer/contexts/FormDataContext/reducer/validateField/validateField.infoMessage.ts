@@ -1,5 +1,8 @@
-import type { Message } from '../../../../FieldRenderer';
-import type { InfoMessageProps } from '../../../../FormRenderer.types';
+import type { Message } from 'formRenderer/FieldRenderer';
+import type { InfoMessageProps } from 'formRenderer/FormRenderer.types';
+
+import { localization } from 'src/localization';
+
 import { addErrorMessage } from './validateField.utils';
 
 export const validateInfoMessage = (field: InfoMessageProps): Message[] => {
@@ -7,7 +10,11 @@ export const validateInfoMessage = (field: InfoMessageProps): Message[] => {
   const { severity = 'info' } = properties ?? {};
 
   if (['warning', 'error'].includes(severity)) {
-    return [addErrorMessage('Please review conditions.')];
+    return [
+      addErrorMessage(
+        localization('components.formRenderer.errorMessages.reviewConditions'),
+      ),
+    ];
   }
 
   return [];

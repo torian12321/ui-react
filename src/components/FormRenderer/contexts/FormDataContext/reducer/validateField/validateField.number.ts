@@ -1,6 +1,9 @@
+import type { Message } from 'formRenderer/FieldRenderer';
+
 import { isNumber } from '@torian12321/js-utils/typeChecker';
 
-import type { Message } from '../../../../FieldRenderer';
+import { localization } from 'src/localization';
+
 import type { FieldWithValue, FormFields } from '../../types';
 import type { MumericalValidations } from './validateField.types';
 import { addErrorMessage, getValidationProps } from './validateField.utils';
@@ -22,13 +25,16 @@ export const validateFieldNumber = (
   if (isNumber(value)) {
     if (minValidation.value && value < minValidation.value) {
       addError(
-        `Please enter a number bigger than ${minValidation.value}`,
-        minValidation.message,
+        localization('components.formRenderer.errorMessages.minNumber', {
+          min: minValidation.value,
+        }),
       );
     }
     if (maxValidation.value && value > maxValidation.value) {
       addError(
-        `Please enter a number smaller than ${maxValidation.value}`,
+        localization('components.formRenderer.errorMessages.maxNumber', {
+          max: maxValidation.value,
+        }),
         maxValidation.message,
       );
     }

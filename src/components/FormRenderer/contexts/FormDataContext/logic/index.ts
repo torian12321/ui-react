@@ -1,6 +1,6 @@
+import type { Field, FormLogic } from 'formRenderer/FormRenderer.types';
 import isEqual from 'lodash/isEqual';
 
-import type { Field, FormLogic } from '../../../FormRenderer.types';
 import type { FieldValues } from '../reducer';
 import { applyFieldLogic as applyFieldLogicOnce } from './applyLogic';
 

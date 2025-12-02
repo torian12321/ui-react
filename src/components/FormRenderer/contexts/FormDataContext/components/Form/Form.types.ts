@@ -1,9 +1,7 @@
 import type { PropsWithChildren, RefObject } from 'react';
 
-import type {
-  ComponentWithStyles,
-  ComponentWithTestId,
-} from '../../../../../../types';
+import type { ComponentWithStyles, ComponentWithTestId } from 'src/types';
+
 import type { OnChange, OnSubmit } from '../../';
 
 export type FormProps = PropsWithChildren<ComponentWithTestId> &

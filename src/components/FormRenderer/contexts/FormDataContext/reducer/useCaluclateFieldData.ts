@@ -1,6 +1,6 @@
+import type { ChoiceItem } from 'formRenderer/FieldRenderer/Fields/Fields.types';
 import isEqual from 'lodash/isEqual';
 
-import type { ChoiceItem } from '../../../FieldRenderer/Fields/Fields.types';
 import { useExternalData, useFormDataState } from '../FormDataContext';
 import type { FieldData, FieldWithValue, FormFields } from '../types';
 import type { ValidateField } from './validateField/validateField.types';

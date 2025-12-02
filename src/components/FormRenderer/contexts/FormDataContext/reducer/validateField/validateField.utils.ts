@@ -1,4 +1,5 @@
-import type { Message } from '../../../../FieldRenderer';
+import type { Message } from 'formRenderer/FieldRenderer';
+
 import type { FormFields } from '../../types';
 import type { Validation, ValidationObj } from './validateField.types';
 

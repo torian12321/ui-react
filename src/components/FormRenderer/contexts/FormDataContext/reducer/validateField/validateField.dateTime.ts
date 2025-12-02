@@ -1,3 +1,6 @@
+import { TODAY } from 'formRenderer/constants';
+import type { Message } from 'formRenderer/FieldRenderer';
+
 import {
   getCurrentDate,
   isDateAfter,
@@ -5,8 +8,8 @@ import {
   isDateValid,
 } from '@torian12321/js-utils';
 
-import { TODAY } from '../../../../constants';
-import type { Message } from '../../../../FieldRenderer';
+import { localization } from 'src/localization';
+
 import type { FieldWithValue, FormFields } from '../../types';
 import type { DateValidations } from './validateField.types';
 import { addErrorMessage, getValidationProps } from './validateField.utils';
@@ -23,7 +26,9 @@ export const validateFieldDateTime = (
 
   if (value) {
     if (!isDateValid(value as string)) {
-      addError('Invalid date');
+      addError(
+        localization('components.formRenderer.errorMessages.invalidDate'),
+      );
     } else {
       // eslint-disable-next-line @typescript-eslint/naming-convention
       const { min_date, max_date } = validations as DateValidations;
@@ -36,7 +41,9 @@ export const validateFieldDateTime = (
         isDateBefore(value as string, minValidation.value)
       ) {
         addError(
-          `Please select a date posterior to ${minValidation.value}`,
+          localization('components.formRenderer.errorMessages.minDate', {
+            min: minValidation.value,
+          }),
           minValidation.message,
         );
       }
@@ -46,7 +53,9 @@ export const validateFieldDateTime = (
         isDateAfter(value as string, maxValidation.value)
       ) {
         addError(
-          `Please select a date previous to ${maxValidation.value}`,
+          localization('components.formRenderer.errorMessages.maxDate', {
+            max: maxValidation.value,
+          }),
           maxValidation.message,
         );
       }
@@ -58,13 +67,17 @@ export const validateFieldDateTime = (
           minValidation.value === TODAY &&
           isDateBefore(value as string, todayDate)
         ) {
-          addError('Please select a date posterior to today`s date');
+          addError(
+            localization('components.formRenderer.errorMessages.minDateToday'),
+          );
         }
         if (
           maxValidation.value === TODAY &&
           isDateAfter(value as string, todayDate)
         ) {
-          addError('Please select a date previous to today`s date');
+          addError(
+            localization('components.formRenderer.errorMessages.maxDateToday'),
+          );
         }
       }
     }

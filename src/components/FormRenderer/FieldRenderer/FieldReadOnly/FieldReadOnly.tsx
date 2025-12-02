@@ -2,6 +2,8 @@ import type { JSX } from 'react';
 
 import { formatDate, formatDateTime, isString } from '@torian12321/js-utils';
 
+import { useLocalization } from 'src/localization';
+
 import { FieldProps, InfoList, InfoMessage } from '../Fields';
 import { Content, Wrapper } from './FieldReadOnly.styles';
 
@@ -9,6 +11,7 @@ const forceToBeArray = <T,>(value: T | T[]): T[] =>
   Array.isArray(value) ? value : [value];
 
 export const FieldReadOnly = (props: FieldProps): JSX.Element | null => {
+  const l10n = useLocalization();
   const { type, value = '', properties = {} } = props;
 
   // INFO_MESSAGE and INFO_LIST types are non-editable fields by default
@@ -25,7 +28,9 @@ export const FieldReadOnly = (props: FieldProps): JSX.Element | null => {
       case 'file_upload':
         return 'FIELD_TYPE.FILE_UPLOAD'; // TODO
       case 'boolean':
-        return value ? 'Yes' : 'No';
+        return value
+          ? l10n('common.booleanOptions.yes')
+          : l10n('common.booleanOptions.no');
 
       case 'date':
         return formatDate(value as string);

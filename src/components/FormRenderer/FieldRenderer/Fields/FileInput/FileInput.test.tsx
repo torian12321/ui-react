@@ -6,7 +6,7 @@ import { FIELD_TYPE } from 'src/components/FormRenderer/constants';
 import { FileInput } from './FileInput';
 import { formatFileSize } from './FileInput.utils';
 
-describe('Components/FormRenderer/FileInput', () => {
+describe('FormRenderer/FileInput', () => {
   it('Should render', () => {
     render(
       <FileInput

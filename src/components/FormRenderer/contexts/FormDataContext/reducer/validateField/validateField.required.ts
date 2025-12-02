@@ -1,6 +1,9 @@
+import type { Message } from 'formRenderer/FieldRenderer';
+
 import { capitaliseFirstLetter } from '@torian12321/js-utils/string';
 
-import type { Message } from '../../../../FieldRenderer';
+import { localization } from 'src/localization';
+
 import type { FieldWithValue } from '../../types';
 import { addErrorMessage, getValidationProps } from './validateField.utils';
 
@@ -10,18 +13,33 @@ const isEmptyArray = (value: unknown): boolean =>
 const getMessageRequired = (field: FieldWithValue): string => {
   const { label, type } = field;
   const styledLabel = capitaliseFirstLetter(label);
-  let messageText = 'Please make a selection';
+  let messageText = localization(
+    'components.formRenderer.errorMessages.makeSelection',
+    {
+      label: styledLabel,
+    },
+  );
 
   if (styledLabel.trim() !== '') {
     switch (type) {
       case 'dropdown':
       case 'options_list':
       case 'radio_button':
-        messageText = `Select a Valid ${styledLabel}`;
+        messageText = localization(
+          'components.formRenderer.errorMessages.selectValid',
+          {
+            label: styledLabel,
+          },
+        );
         break;
       case 'text':
       default:
-        messageText = `Please Enter ${styledLabel}`;
+        messageText = localization(
+          'components.formRenderer.errorMessages.pleaseEnter',
+          {
+            label: styledLabel,
+          },
+        );
         break;
     }
   } else if (type === 'file_upload') {

@@ -1,5 +1,6 @@
-import type { Message } from '../../../../FieldRenderer';
-import type { InfoMessageProps } from '../../../../FormRenderer.types';
+import type { Message } from 'formRenderer/FieldRenderer';
+import type { InfoMessageProps } from 'formRenderer/FormRenderer.types';
+
 import type { FieldWithValue, FormFields } from '../../types';
 import { validateFieldDateTime } from './validateField.dateTime';
 import { validateInfoMessage } from './validateField.infoMessage';

@@ -1,4 +1,5 @@
-import type { FormSchema } from '../../FormRenderer.types';
+import type { FormSchema } from 'formRenderer/FormRenderer.types';
+
 import { mockOptions } from '../mockFormUtils';
 
 export const formWithRequiredValidations: FormSchema = {

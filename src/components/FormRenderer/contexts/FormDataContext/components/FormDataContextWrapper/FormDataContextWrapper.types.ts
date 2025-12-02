@@ -1,12 +1,12 @@
 import type {
   ChoicesCollection,
   CustomLabels,
-} from '../../../../FieldRenderer/Fields/Fields.types';
+} from 'formRenderer/FieldRenderer/Fields/Fields.types';
 import type {
   DefaultValues,
   Field,
   FormLogic,
-} from '../../../../FormRenderer.types';
+} from 'formRenderer/FormRenderer.types';
 
 export type Props<
   FieldNames extends string = string,

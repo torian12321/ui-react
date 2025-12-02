@@ -1,5 +1,5 @@
-import { TODAY } from '../../../../constants';
-import type { Message } from '../../../../FieldRenderer';
+import { TODAY } from 'formRenderer/constants';
+import type { Message } from 'formRenderer/FieldRenderer';
 
 export type FormFieldValidations = { [fieldName: string]: ValidateField };
 export type ValidateField = {
