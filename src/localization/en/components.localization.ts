@@ -52,10 +52,25 @@ export default {
       tip: 'Adding a new view will save both the selected columns and filters',
       buttonSave: 'Save custom view',
       errorMessages: {
-        tooShort: `The name is too short. It must be at least {{min}} characters.`,
-        tooLong: `The name is too long. It must be less than {{max}} characters.`,
+        tooShort:
+          'The name is too short. It must be at least {{min}} characters.',
+        tooLong:
+          'The name is too long. It must be less than {{max}} characters.',
         alreadyInUse: 'The name is already in use.',
       },
+    },
+  },
+  transferList: {
+    label: {
+      available: 'Available {{label}}',
+      selected: 'Selected {{label}}',
+    },
+    input: {
+      placeholder: 'Filter...',
+    },
+    footer: {
+      totalElements: '{{count}}',
+      filteredElements: '{{filtered}} of {{count}}',
     },
   },
 };
