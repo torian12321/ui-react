@@ -1,0 +1,83 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title='components/FormRenderer/DefaultValues/Introduction' />
+
+# Default Values
+
+When setting the fields configuration, it is possible to set the default for each field individually.
+
+```jsx
+const fields = [
+  {
+    type: 'text',
+    name: 'name',
+    label: 'Name',
+    defaultValue: 'Jane',
+  },
+  {
+    type: 'text',
+    name: 'email',
+    label: 'Email',
+    defaultValue: 'jane@example.com',
+  },
+];
+
+const UserForm = () => <FormRenderer fields={fields} />;
+```
+
+Additionally, to set the default values to fields definition, it is possible to set the default value at a component level `<FormRenderer />`.
+
+```jsx
+const fields = [
+  {
+    type: 'text',
+    name: 'name',
+    label: 'Name',
+  },
+  {
+    type: 'text',
+    name: 'email',
+    label: 'Email',
+  },
+];
+
+const UserForm = () => (
+  <FormRenderer
+    fields={fields}
+    defaultValues={{
+      name: 'Brian Adams',
+      email: 'briandams@example.com',
+    }}
+  />
+);
+```
+
+If both defaultValues are set, the one at a component value will prevail.
+This is especially useful when we want to show an Edit form
+
+```jsx
+const fields = [
+  {
+    type: 'text',
+    name: 'name',
+    label: 'Name',
+    defaultValue: 'Jane',
+  },
+  {
+    type: 'text',
+    name: 'email',
+    label: 'Email',
+    defaultValue: 'jane@example.com',
+  },
+];
+
+const UserForm = () => (
+  <FormRenderer
+    fields={fields}
+    defaultValues={{
+      name: 'Brian Adams',
+      email: 'briandams@example.com',
+    }}
+  />
+);
+```

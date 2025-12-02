@@ -1,0 +1,57 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title='Components/FormRenderer/Validations/Introduction' />
+
+# Validations
+
+When declaring a Field object, a collection of validations can be set:
+
+```js
+{
+  type: 'number',
+  name: 'age',
+  label: 'Age',
+  validations: {
+    required: true,
+    min: 10,
+  },
+},
+```
+
+When the field changes its value or is blurred, the code to calculate its validity is executed.
+If a fail passes, a message will be shown to indicate it
+
+By default, the errors will be displayed on the screen after the field is submitted
+If `validateAfterSubmit` is set to false, the field validations will be shown right after the user interacts with a field, there is no need for a submit
+
+NOTE: the examples on the below stories had been defaulted with incorrect values, so to see the error messages only click the `SUBMIT` button
+
+# IsValid
+
+When a form is submitted, the action called will return the values from the fields, but also it will automatically calculate
+if the form is valid or not. The value of `isValid` is based on the validations set.
+
+```jsx
+const Form = () => {
+  const handleOnSubmit = async (submitArgs: OnSubmitArgs) => {
+    if (!submitArgs.isValid) {;
+      // Do something like show a message if it is not validation
+      // ...
+    } else {
+      // Execute code on submit
+      // ...
+    }
+  };
+
+  return (
+    <FormRenderer
+      fields={fields}
+      onSubmit={handleOnSubmit}
+  />
+  )
+}
+```
+
+### NOTE
+
+If a `<FormRenderer />` component has fields not been displayed (because of some logic) the conditions on the non-displayed fields will not be considered to calculate `isValid` value.
