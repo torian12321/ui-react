@@ -69,7 +69,7 @@ export default {
       placeholder: 'Filter...',
     },
     footer: {
-      totalElements: '{{count}}',
+      totalElements: '{{count}} elements',
       filteredElements: '{{filtered}} of {{count}}',
     },
   },
