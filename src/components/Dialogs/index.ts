@@ -1,3 +1,4 @@
-export { DialogInformation } from './DialogInformation';
-export { DialogWarning } from './DialogWarning';
+export * from './DialogAction';
+export * from './DialogInformation';
+export * from './DialogWarning';
 export { useDialog } from './useDialog';

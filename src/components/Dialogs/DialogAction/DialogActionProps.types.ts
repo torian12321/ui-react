@@ -1,6 +1,6 @@
 import type { DialogsProps } from '../Dialogs.types';
 
-export type DialogWarningProps = DialogsProps & {
+export type DialogActionProps = DialogsProps & {
   cancelText?: string;
   confirmText?: string;
   additionalButtonText?: string;

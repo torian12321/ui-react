@@ -1,6 +1,6 @@
-export type DialogInformationProps = {
-  open: boolean;
-  message: string;
-  onConfirm: VoidFunction;
+import type { DialogsProps } from '../Dialogs.types';
+
+export type DialogInformationProps = DialogsProps & {
   confirmText?: string;
+  onConfirm: VoidFunction;
 };
