@@ -4,8 +4,9 @@ import { docImport } from 'src/utils/storybook';
 
 import { mockHtml, mockText } from './__mock__';
 import { DocumentDisplay } from './DocumentDisplay';
+import type { DocumentDisplayProps } from './DocumentDisplay.types';
 
-const meta: Meta = {
+const meta: Meta<DocumentDisplayProps> = {
   title: 'Components/DocumentDisplay',
   component: DocumentDisplay,
   tags: ['autodocs'],
@@ -16,7 +17,7 @@ const meta: Meta = {
       },
     },
   },
-} satisfies Meta<typeof DocumentDisplay>;
+};
 
 export default meta;
 type Story = StoryObj<typeof meta>;

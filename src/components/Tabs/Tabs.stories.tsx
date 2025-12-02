@@ -8,7 +8,7 @@ import { Tabs } from './Tabs';
 import type { TabsProps } from './Tabs.types';
 import { useTab } from './useTab';
 
-const meta = {
+const meta: Meta<TabsProps> = {
   title: 'Components/Tabs',
   component: Tabs,
   tags: ['autodocs'],
@@ -19,7 +19,7 @@ const meta = {
       },
     },
   },
-} satisfies Meta<typeof Tabs>;
+};
 
 export default meta;
 

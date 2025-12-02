@@ -4,9 +4,10 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import { Button } from 'src/components';
 import { docImport } from 'src/utils/storybook';
 
+import type { ModalProps } from './Modal.types';
 import { Modal, useModal } from './';
 
-const meta = {
+const meta: Meta<ModalProps> = {
   title: 'Components/Modal',
   component: Modal,
   parameters: {
@@ -31,7 +32,7 @@ const meta = {
       },
     },
   },
-} satisfies Meta<typeof Modal>;
+};
 
 export default meta;
 type Story = StoryObj<typeof meta>;

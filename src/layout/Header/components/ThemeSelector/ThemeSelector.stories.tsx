@@ -1,17 +1,25 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import { fn } from 'storybook/test';
 
-import { ThemeSelector } from './ThemeSelector';
+import { docImport } from 'src/utils/storybook';
 
-const meta: Meta = {
+import { ThemeSelector } from './ThemeSelector';
+import type { ThemeSelectorProps } from './ThemeSelector.types';
+
+const meta: Meta<ThemeSelectorProps> = {
   title: 'Layout/Header/Components/ThemeSelector',
   component: ThemeSelector,
   tags: ['autodocs'],
   parameters: {
     layout: 'centered',
+    docs: {
+      description: {
+        component: docImport('layout', 'ThemeSelector'),
+      },
+    },
   },
   args: { show: true, onChange: fn() },
-} satisfies Meta<typeof ThemeSelector>;
+};
 
 export default meta;
 type Story = StoryObj<typeof meta>;

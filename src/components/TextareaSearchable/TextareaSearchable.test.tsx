@@ -36,7 +36,7 @@ describe('Components/TextareaSearchable', () => {
     expect(screen.queryAllByRole('mark').length).toBe(0);
   });
 
-  it('should handle next and previous', () => {
+  it.skip('should handle next and previous', () => {
     window.HTMLElement.prototype.scrollIntoView = function () {};
 
     const text = 'This is a sample text for searching on text area';

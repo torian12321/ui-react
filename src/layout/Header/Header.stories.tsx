@@ -4,8 +4,9 @@ import { fn } from 'storybook/test';
 import { docImport } from 'src/utils/storybook';
 
 import { Header } from './Header';
+import { HeaderProps } from './Header.types';
 
-const meta: Meta = {
+const meta: Meta<HeaderProps> = {
   title: 'Layout/Header',
   component: Header,
   tags: ['autodocs', 'new'],
@@ -18,7 +19,7 @@ const meta: Meta = {
     },
   },
   args: { title: 'RWS - Propylon' },
-} satisfies Meta<typeof Header>;
+};
 
 export default meta;
 type Story = StoryObj<typeof meta>;

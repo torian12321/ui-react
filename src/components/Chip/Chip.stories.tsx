@@ -4,8 +4,9 @@ import { fn } from 'storybook/test';
 import { docImport } from 'src/utils/storybook';
 
 import { Chip } from './Chip';
+import type { ChipProps } from './Chip.types';
 
-const meta: Meta = {
+const meta: Meta<ChipProps> = {
   title: 'Components/Chip',
   component: Chip,
   parameters: {
@@ -29,7 +30,7 @@ const meta: Meta = {
       control: { type: 'color' },
     },
   },
-} satisfies Meta<typeof Chip>;
+};
 
 export default meta;
 type Story = StoryObj<typeof meta>;

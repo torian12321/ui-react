@@ -4,11 +4,12 @@ import { Button } from 'src/components';
 import { docImport } from 'src/utils/storybook';
 
 import { Tooltip } from './Tooltip';
-import type { TooltipTypes } from './Tooltip.types';
+import type { TooltipProps, TooltipTypes } from './Tooltip.types';
 
-const meta = {
+const meta: Meta<TooltipProps> = {
   title: 'Components/Tooltip',
   component: Tooltip,
+  tags: ['autodocs'],
   parameters: {
     layout: 'centered',
     docs: {
@@ -17,8 +18,7 @@ const meta = {
       },
     },
   },
-  tags: ['autodocs'],
-} satisfies Meta<typeof Tooltip>;
+};
 
 export default meta;
 type Story = StoryObj<typeof meta>;

@@ -4,7 +4,7 @@ import { docImport } from 'src/utils/storybook';
 
 import { SplashScreen } from './SplashScreen';
 
-const meta = {
+const meta: Meta<typeof SplashScreen> = {
   title: 'Views/SplashScreen',
   component: SplashScreen,
   tags: ['autodocs'],
@@ -16,7 +16,7 @@ const meta = {
       },
     },
   },
-} satisfies Meta<typeof SplashScreen>;
+};
 
 export default meta;
 type Story = StoryObj<typeof meta>;

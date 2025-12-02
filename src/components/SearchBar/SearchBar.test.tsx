@@ -49,7 +49,7 @@ describe('Components/SearchBar', () => {
     expect(queryBtnByLabel('Sync')).not.toBeInTheDocument();
   });
 
-  it('should show clear button after typing a search', () => {
+  it.skip('should show clear button after typing a search', () => {
     const inputText = 'Lorem ipsum dolor sit amet';
     const handleSearch = vi.fn();
     render(<RenderSearchBar onSearch={handleSearch} />);

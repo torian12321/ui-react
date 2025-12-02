@@ -3,17 +3,25 @@ import MuiSettingsIcon from '@mui/icons-material/Settings';
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import { fn } from 'storybook/test';
 
-import { AccountManager } from './AccountManager';
+import { docImport } from 'src/utils/storybook';
 
-const meta: Meta = {
+import { AccountManager } from './AccountManager';
+import type { AccountManagerProps } from './AccountManager.types';
+
+const meta: Meta<AccountManagerProps> = {
   title: 'Layout/Header/Components/AccountManager',
   component: AccountManager,
   tags: ['autodocs'],
   parameters: {
     layout: 'centered',
+    docs: {
+      description: {
+        component: docImport('layout', 'AccountManager'),
+      },
+    },
   },
   args: { userName: 'John Doe', onLogout: fn() },
-} satisfies Meta<typeof AccountManager>;
+};
 
 export default meta;
 type Story = StoryObj<typeof meta>;

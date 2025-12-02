@@ -15,7 +15,7 @@ import {
   useAccordionRef,
 } from './';
 
-const meta = {
+const meta: Meta<AccordionProps> = {
   title: 'Components/Accordion',
   component: Accordion,
   tags: ['autodocs'],
@@ -26,7 +26,7 @@ const meta = {
       },
     },
   },
-} satisfies Meta<typeof Accordion>;
+};
 
 export default meta;
 type Story = StoryObj<AccordionProps>;

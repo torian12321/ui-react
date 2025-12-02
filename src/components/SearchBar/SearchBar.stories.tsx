@@ -28,7 +28,7 @@ const StateDecorator: Decorator<SearchBarProps> = (
   return <Story args={{ ...context.args, value, onChange: handleChange }} />;
 };
 
-const meta = {
+const meta: Meta<SearchBarProps> = {
   title: 'Components/SearchBar',
   component: SearchBar,
   decorators: [StateDecorator],
@@ -46,7 +46,7 @@ const meta = {
     onSearch: fn(),
     onChange: fn(),
   },
-} satisfies Meta<SearchBarProps>;
+};
 
 export default meta;
 type Story = StoryObj<typeof meta>;

@@ -7,7 +7,7 @@ import { InputMultiple } from './InputMultiple';
 import type { InputMultipleProps } from './InputMultiple.types';
 import { useInputMultiple } from './useInputMultiple';
 
-const meta = {
+const meta: Meta<InputMultipleProps> = {
   title: 'Components/form/InputMultiple',
   component: InputMultiple,
   parameters: {
@@ -40,7 +40,7 @@ const meta = {
       },
     ],
   },
-} satisfies Meta<typeof InputMultiple>;
+};
 
 export default meta;
 

@@ -6,7 +6,7 @@ import { docImport } from 'src/utils/storybook';
 import { Button } from './Button';
 import { BUTTON_SIZES } from './Button.types';
 
-const meta = {
+const meta: Meta<typeof Button> = {
   title: 'Components/Button',
   component: Button,
   parameters: {
@@ -19,7 +19,7 @@ const meta = {
   },
   tags: ['autodocs'],
   args: { children: 'Button', onClick: fn() },
-} satisfies Meta<typeof Button>;
+};
 
 export default meta;
 type Story = StoryObj<typeof meta>;

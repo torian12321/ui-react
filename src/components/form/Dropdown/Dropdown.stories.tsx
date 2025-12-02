@@ -8,7 +8,7 @@ import { options } from './__mocks';
 import { Dropdown } from './Dropdown';
 import type { DropdownProps, OptionValue } from './Dropdown.types';
 
-const meta: Meta = {
+const meta: Meta<DropdownProps> = {
   title: 'Components/form/Dropdown',
   component: Dropdown,
   parameters: {
@@ -24,7 +24,7 @@ const meta: Meta = {
     label: 'Country',
     options,
   },
-} satisfies Meta<DropdownProps>;
+};
 
 export default meta;
 

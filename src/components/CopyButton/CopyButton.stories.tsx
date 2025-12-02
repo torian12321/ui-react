@@ -3,8 +3,9 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import { docImport } from 'src/utils/storybook';
 
 import { CopyButton } from './CopyButton';
+import type { CopyButtonProps } from './CopyButton.types';
 
-const meta: Meta = {
+const meta: Meta<CopyButtonProps> = {
   title: 'Components/CopyButton',
   component: CopyButton,
   parameters: {
@@ -17,7 +18,7 @@ const meta: Meta = {
   },
   tags: ['autodocs'],
   args: { text: 'I am demo text to be copied' },
-} satisfies Meta<typeof CopyButton>;
+};
 
 export default meta;
 type Story = StoryObj<typeof meta>;

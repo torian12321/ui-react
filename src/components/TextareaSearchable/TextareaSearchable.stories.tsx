@@ -9,8 +9,9 @@ import { docImport } from 'src/utils/storybook';
 
 import { mockText } from './__mock__';
 import { TextareaSearchable } from './TextareaSearchable';
+import type { TextareaSearchableProps } from './TextareaSearchable.types';
 
-const meta = {
+const meta: Meta<TextareaSearchableProps> = {
   title: 'Components/TextareaSearchable',
   component: TextareaSearchable,
   tags: ['autodocs'],
@@ -25,7 +26,7 @@ const meta = {
   args: {
     text: mockText,
   },
-} satisfies Meta<typeof TextareaSearchable>;
+};
 
 export default meta;
 type Story = StoryObj<typeof TextareaSearchable>;

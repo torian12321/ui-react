@@ -10,6 +10,7 @@ import type { IconButtonProps } from 'src/components';
 import { docImport } from 'src/utils/storybook';
 
 import { IconButtonGroup } from './IconButtonGroup';
+import type { IconButtonGroupProps } from './IconButtonGroup.types';
 
 const BASE_ACTIONS: IconButtonProps[] = [
   {
@@ -24,7 +25,7 @@ const BASE_ACTIONS: IconButtonProps[] = [
   },
 ];
 
-const meta: Meta = {
+const meta: Meta<IconButtonGroupProps> = {
   title: 'Components/IconButtonGroup',
   component: IconButtonGroup,
   tags: ['autodocs'],
@@ -39,7 +40,7 @@ const meta: Meta = {
   args: {
     actions: BASE_ACTIONS,
   },
-} satisfies Meta<typeof IconButtonGroup>;
+};
 
 export default meta;
 type Story = StoryObj<typeof meta>;

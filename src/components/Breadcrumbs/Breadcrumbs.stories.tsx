@@ -3,8 +3,9 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import { docImport, statusBadge } from 'src/utils/storybook';
 
 import { Breadcrumbs } from './Breadcrumbs';
+import type { BreadcrumbsProps } from './Breadcrumbs.types';
 
-const meta = {
+const meta: Meta<BreadcrumbsProps> = {
   title: 'Components/Breadcrumbs',
   component: Breadcrumbs,
   tags: ['autodocs'],
@@ -18,7 +19,7 @@ const meta = {
       },
     },
   },
-} satisfies Meta<typeof Breadcrumbs>;
+};
 
 export default meta;
 type Story = StoryObj<typeof Breadcrumbs>;

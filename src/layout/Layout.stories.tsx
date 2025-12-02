@@ -6,8 +6,8 @@ import type { Meta } from '@storybook/react-vite';
 import { fn } from 'storybook/test';
 
 import { Breadcrumbs, Button } from 'src/components';
+import { docImport } from 'src/utils/storybook';
 
-// import { Button } from '../components/Button';
 import { SbMockFiller } from './Layout.styles';
 import {
   AccountManager,
@@ -24,14 +24,22 @@ import {
   useSidebar,
 } from './';
 
-const meta = {
+const meta: Meta<typeof LayoutWrapper> = {
   title: 'Layout/Demo',
   component: LayoutWrapper,
+  tags: ['autodocs'],
   parameters: {
     layout: 'fullscreen',
+    docs: {
+      description: {
+        component: docImport(
+          'layout',
+          'LayoutWrapper, Header, Sidebar, Main, Footer, InnerToolBar, Content, ErrorPageBoundary',
+        ),
+      },
+    },
   },
-  tags: ['autodocs'],
-} satisfies Meta<typeof LayoutWrapper>;
+};
 
 export default meta;
 

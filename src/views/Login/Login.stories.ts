@@ -4,8 +4,9 @@ import { fn } from 'storybook/test';
 import { docImport } from 'src/utils/storybook';
 
 import { Login } from './Login';
+import type { LoginProps } from './Login.types';
 
-const meta: Meta = {
+const meta: Meta<LoginProps> = {
   title: 'Views/Login',
   component: Login,
   tags: ['autodocs'],
@@ -18,7 +19,7 @@ const meta: Meta = {
     },
   },
   args: { appName: 'RWS - Propylon', btnOnClick: fn() },
-} satisfies Meta<typeof Login>;
+};
 
 export default meta;
 type Story = StoryObj<typeof meta>;

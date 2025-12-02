@@ -4,7 +4,7 @@ import { docImport } from 'src/utils/storybook';
 
 import { LabeledContent } from './LabeledContent';
 
-const meta: Meta = {
+const meta: Meta<typeof LabeledContent> = {
   title: 'Components/LabeledContent',
   component: LabeledContent,
   parameters: {
@@ -17,7 +17,7 @@ const meta: Meta = {
   },
   tags: ['autodocs'],
   args: { label: 'Description label', children: 'Lorem ipsum dolor sit amet' },
-} satisfies Meta<typeof LabeledContent>;
+};
 
 export default meta;
 type Story = StoryObj<typeof meta>;

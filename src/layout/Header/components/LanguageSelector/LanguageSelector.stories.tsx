@@ -1,17 +1,25 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import { fn } from 'storybook/test';
 
-import { LanguageSelector } from './LanguageSelector';
+import { docImport } from 'src/utils/storybook';
 
-const meta: Meta = {
+import { LanguageSelector } from './LanguageSelector';
+import type { LanguageSelectorProps } from './LanguageSelector.types';
+
+const meta: Meta<LanguageSelectorProps> = {
   title: 'Layout/Header/Components/LanguageSelector',
   component: LanguageSelector,
   tags: ['autodocs'],
   parameters: {
     layout: 'centered',
+    docs: {
+      description: {
+        component: docImport('layout', 'LanguageSelector'),
+      },
+    },
   },
   args: { show: true, onChange: fn() },
-} satisfies Meta<typeof LanguageSelector>;
+};
 
 export default meta;
 type Story = StoryObj<typeof meta>;

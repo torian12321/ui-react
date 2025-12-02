@@ -3,8 +3,9 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import { docImport } from 'src/utils/storybook';
 
 import { CompanyLogo } from './CompanyLogo';
+import type { CompanyLogoProps } from './CompanyLogo.types';
 
-const meta: Meta = {
+const meta: Meta<CompanyLogoProps> = {
   title: 'Components/CompanyLogo',
   component: CompanyLogo,
   tags: ['autodocs'],
@@ -17,7 +18,7 @@ const meta: Meta = {
     },
   },
   args: { size: 'medium' },
-} satisfies Meta<typeof CompanyLogo>;
+};
 
 export default meta;
 type Story = StoryObj<typeof meta>;

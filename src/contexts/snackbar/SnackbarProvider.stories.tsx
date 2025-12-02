@@ -1,6 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
+import { SnackbarProviderProps } from 'notistack';
 
 import { Button } from 'src/components';
+import { docImport } from 'src/utils/storybook';
 
 import {
   showMessageError,
@@ -8,16 +10,21 @@ import {
   showMessageSuccess,
   showMessageWarning,
 } from './showMessage';
-import { SnackbarProvider } from '.';
+import { SnackbarProvider } from './SnackbarProvider';
 
-const meta = {
+const meta: Meta<SnackbarProviderProps> = {
   title: 'Contexts/SnackbarProvider',
   component: SnackbarProvider,
+  tags: ['autodocs'],
   parameters: {
     layout: 'centered',
+    docs: {
+      description: {
+        component: docImport('contexts', 'SnackbarProvider'),
+      },
+    },
   },
-  tags: ['autodocs'],
-} satisfies Meta<typeof SnackbarProvider>;
+};
 
 export default meta;
 type Story = StoryObj<typeof meta>;

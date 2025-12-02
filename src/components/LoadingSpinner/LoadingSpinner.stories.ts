@@ -3,8 +3,9 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import { docImport } from 'src/utils/storybook';
 
 import { LoadingSpinner } from './LoadingSpinner';
+import type { LoadingSpinnerProps } from './LoadingSpinner.types';
 
-const meta = {
+const meta: Meta<LoadingSpinnerProps> = {
   title: 'Components/LoadingSpinner',
   component: LoadingSpinner,
   parameters: {
@@ -16,7 +17,7 @@ const meta = {
     },
   },
   tags: ['autodocs'],
-} satisfies Meta<typeof LoadingSpinner>;
+};
 
 export default meta;
 type Story = StoryObj<typeof meta>;

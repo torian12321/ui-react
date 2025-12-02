@@ -1,10 +1,10 @@
+import { useState } from 'react';
 import type {
   Decorator,
   Meta,
   StoryContext,
   StoryObj,
 } from '@storybook/react-vite';
-import { useState } from 'react';
 import { action } from 'storybook/actions';
 
 import { docImport } from 'src/utils/storybook';

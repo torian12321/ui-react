@@ -4,8 +4,9 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import { fn } from 'storybook/test';
 
 import { IconButton } from './IconButton';
+import type { IconButtonProps } from './IconButton.types';
 
-const meta: Meta = {
+const meta: Meta<IconButtonProps> = {
   title: 'Components/IconButton',
   component: IconButton,
   parameters: {
@@ -17,7 +18,7 @@ const meta: Meta = {
     label: 'Edit',
     onClick: fn(),
   },
-} satisfies Meta<typeof IconButton>;
+};
 
 export default meta;
 type Story = StoryObj<typeof meta>;

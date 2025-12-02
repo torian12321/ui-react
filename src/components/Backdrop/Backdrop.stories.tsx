@@ -3,8 +3,9 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import { docImport } from 'src/utils/storybook';
 
 import { Backdrop } from './Backdrop';
+import type { BackdropProps } from './Backdrop.types';
 
-const meta = {
+const meta: Meta<BackdropProps> = {
   title: 'Components/Backdrop',
   component: Backdrop,
   tags: ['autodocs'],
@@ -17,7 +18,7 @@ const meta = {
       },
     },
   },
-} satisfies Meta<typeof Backdrop>;
+};
 
 export default meta;
 type Story = StoryObj<typeof Backdrop>;
